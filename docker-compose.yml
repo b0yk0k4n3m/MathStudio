@@ -1,0 +1,20 @@
+services:
+  math-studio:
+    build: .
+    container_name: antigravity-math-studio
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - SHOW_BROWSER=false
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s

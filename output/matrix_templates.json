@@ -1,0 +1,1062 @@
+[
+  {
+    "id": "mat_chuan_thpt_2026",
+    "title": "Chuẩn Tốt nghiệp THPT 2026 (Bộ GD&ĐT)",
+    "desc": "Cấu trúc chuẩn: 12 MCQ (0.25đ) + 4 Đúng/Sai (1.00đ) + 6 Trả lời ngắn (0.50đ) = 22 câu (10.00đ)",
+    "duration": 90,
+    "grade": "Toán 12 - Tốt nghiệp THPT 2026",
+    "selected_topics": [
+      "hs_don_dieu",
+      "hs_cuc_tri",
+      "hs_tiem_can",
+      "hs_do_thi",
+      "hs_thuc_te",
+      "oxyz_vecto",
+      "oxyz_mat_phang",
+      "oxyz_duong_thang",
+      "oxyz_mat_cau",
+      "oxyz_thuc_te",
+      "tp_nguyen_ham",
+      "tp_xac_dinh",
+      "tp_dien_tich",
+      "tp_chuyen_dong",
+      "tk_ghep_nhom",
+      "xs_dieu_kien",
+      "xs_toan_phan_bayes",
+      "hh_goc",
+      "hh_khoang_cach",
+      "hh_the_tich"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần I",
+        "subtitle": "Trắc nghiệm nhiều lựa chọn",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Nhận dạng Đồ thị hàm bậc 3, hàm phân thức, hàm f'(x)",
+            "note": "Nhận dạng đồ thị hàm số bậc 3 y = ax^3+bx^2+cx+d (dấu a, c, d, cực trị)",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Đường tiệm cận (Đứng, Ngang & Tiệm cận xiên)",
+            "note": "Nhận dạng tiệm cận đứng, tiệm cận ngang hoặc tiệm cận xiên hàm bậc 2/1",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tính đơn điệu của hàm số (Đồng biến, Nghịch biến)",
+            "note": "Tìm khoảng đơn điệu từ bảng biến thiên hoặc đồ thị hàm số đạo hàm f'(x)",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Góc giữa 2 đường thẳng, góc giữa đường thẳng và mặt phẳng",
+            "note": "Tính góc giữa đường thẳng và mặt phẳng hoặc góc giữa 2 mặt phẳng trong khối chóp",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối chóp có cạnh bên vuông góc đáy, khối chóp đều",
+            "note": "Tính thể tích khối chóp tứ giác đều hoặc chóp SA vuông góc đáy",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Tọa độ điểm, Vectơ, Tích vô hướng & Tích có hướng",
+            "note": "Tọa độ vectơ, tích vô hướng hoặc tọa độ tâm và bán kính mặt cầu (S)",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Viết phương trình mặt phẳng đi qua 3 điểm hoặc tiếp xúc mặt cầu",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Đường thẳng d & Vị trí tương đối",
+            "note": "Viết phương trình đường thẳng giao tuyến hoặc khoảng cách đường thẳng",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Nguyên hàm & Bảng nguyên hàm hàm số cơ bản",
+            "note": "Tìm họ nguyên hàm hàm số hoặc tính tích phân xác định cơ bản",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Mẫu số liệu ghép nhóm (Tứ phân vị, Phương sai, Độ lệch chuẩn)",
+            "note": "Tính khoảng biến thiên, khoảng tứ phân vị Delta_Q hoặc độ lệch chuẩn",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Tính diện tích hình phẳng",
+            "note": "Tính diện tích hình phẳng giới hạn bởi parabol và đường thẳng",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tương giao đồ thị và số nghiệm phương trình f(x) = m",
+            "note": "Biện luận số nghiệm phương trình f(x) = m hoặc hàm hợp có tham số",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần II",
+        "subtitle": "Trắc nghiệm Đúng / Sai",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Bài toán tối ưu hóa kinh tế & đời sống thực tế",
+            "note": "Bài toán thực tế ứng dụng đạo hàm tìm doanh thu lớn nhất hoặc chi phí nhỏ nhất (4 ý a,b,c,d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Mô hình Oxyz thực tế (Radar, máy bay, kiến trúc)",
+            "note": "Mô hình không gian Oxyz thực tế xác định vị trí máy bay hoặc trạm phát sóng radar (4 ý a,b,c,d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Bài toán thực tế: Xét nghiệm y tế, tỷ lệ lỗi phân xưởng",
+            "note": "Xác suất có điều kiện và công thức Bayes trong xét nghiệm y tế hoặc quản lý chất lượng (4 ý a,b,c,d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Bài toán thực tế chuyển động (vận tốc, quãng đường)",
+            "note": "Ứng dụng tích phân trong bài toán chuyển động: hàm vận tốc v(t), quãng đường s(t) (4 ý a,b,c,d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần III",
+        "subtitle": "Trắc nghiệm trả lời ngắn",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Cực trị hàm số (Hàm bậc 3, phân thức, tham số m)",
+            "note": "Tìm số giá trị nguyên của m để hàm số đạt cực trị thỏa mãn điều kiện cho trước",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt cầu (S), tiếp diện và giao tuyến",
+            "note": "Tìm bán kính nhỏ nhất của mặt cầu tiếp xúc mặt phẳng hoặc cắt đường thẳng",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối lăng trụ, hình hộp chữ nhật, hình lập phương",
+            "note": "Tính thể tích khối đa diện hoặc khoảng cách giữa hai đường thẳng chéo nhau",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Công thức xác suất toàn phần & Công thức Bayes",
+            "note": "Tính xác suất thực tế làm tròn đến hàng phần trăm hoặc số thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Thể tích khối tròn xoay & vật thể",
+            "note": "Tính thể tích khối tròn xoay tạo thành khi quay quanh trục hoành",
+            "nb": 0,
+            "th": 0,
+            "vd": 0,
+            "vdc": 1
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Giá trị lớn nhất và Giá trị nhỏ nhất (GTLN - GTNN)",
+            "note": "Bài toán tối ưu hóa chi phí sản xuất hoặc diện tích nguyên vật liệu nhỏ nhất",
+            "nb": 0,
+            "th": 0,
+            "vd": 0,
+            "vdc": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_giua_ky_1",
+    "title": "Kiểm tra Giữa Học kỳ 1 (Hàm số & HHKG)",
+    "desc": "Kiểm tra định kỳ giữa HK1: 6 MCQ + 2 Đúng/Sai + 3 Trả lời ngắn = 11 câu (10.00đ, 45 phút)",
+    "duration": 45,
+    "grade": "Toán 12 - Tốt nghiệp THPT 2026",
+    "selected_topics": [
+      "hs_don_dieu",
+      "hs_cuc_tri",
+      "hs_gtln_gtnn",
+      "hs_tiem_can",
+      "hs_do_thi",
+      "hh_goc",
+      "hh_khoang_cach",
+      "hh_the_tich"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần I",
+        "subtitle": "Một lựa chọn đúng",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tính đơn điệu của hàm số (Đồng biến, Nghịch biến)",
+            "note": "Xét tính đơn điệu hàm bậc ba hoặc hàm phân thức",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Cực trị hàm số (Hàm bậc 3, phân thức, tham số m)",
+            "note": "Tìm điểm cực trị của hàm số cho bởi công thức",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Đường tiệm cận (Đứng, Ngang & Tiệm cận xiên)",
+            "note": "Tìm phương trình tiệm cận đứng và tiệm cận ngang",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Giá trị lớn nhất và Giá trị nhỏ nhất (GTLN - GTNN)",
+            "note": "Tìm GTLN và GTNN trên đoạn [a; b]",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Góc giữa 2 đường thẳng, góc giữa đường thẳng và mặt phẳng",
+            "note": "Tính góc giữa đường thẳng và mặt phẳng đáy chóp SA vuông góc",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối chóp có cạnh bên vuông góc đáy, khối chóp đều",
+            "note": "Tính thể tích khối chóp tứ giác đều",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần II",
+        "subtitle": "Đúng / Sai",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Bài toán tối ưu hóa kinh tế & đời sống thực tế",
+            "note": "Bài toán thực tế khảo sát hàm số và tối ưu hóa chi phí (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Khoảng cách điểm đến mặt phẳng, khoảng cách 2 đường chéo nhau",
+            "note": "Tính khoảng cách từ chân đường cao đến mặt bên khối chóp (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần III",
+        "subtitle": "Trả lời ngắn",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Cực trị hàm số (Hàm bậc 3, phân thức, tham số m)",
+            "note": "Số giá trị nguyên của m để hàm số có 2 điểm cực trị cùng dấu",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối chóp có cạnh bên vuông góc đáy, khối chóp đều",
+            "note": "Tính thể tích khối đa diện tỉ lệ",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Bài toán tối ưu hóa kinh tế & đời sống thực tế",
+            "note": "Bài toán tối ưu chi phí làm bồn chứa",
+            "nb": 0,
+            "th": 0,
+            "vd": 0,
+            "vdc": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_chuyen_de_ham_so",
+    "title": "Chuyên đề Đồ thị & Ứng dụng Đạo hàm",
+    "desc": "Chuyên đề Khảo sát hàm số: 8 MCQ + 3 Đúng/Sai + 4 Trả lời ngắn = 15 câu (10.00đ, 60 phút)",
+    "duration": 60,
+    "grade": "Toán 12 - Tốt nghiệp THPT 2026",
+    "selected_topics": [
+      "hs_don_dieu",
+      "hs_cuc_tri",
+      "hs_gtln_gtnn",
+      "hs_tiem_can",
+      "hs_do_thi",
+      "hs_tuong_giao",
+      "hs_thuc_te"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần I",
+        "subtitle": "Một lựa chọn đúng",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Nhận dạng Đồ thị hàm bậc 3, hàm phân thức, hàm f'(x)",
+            "note": "Nhận dạng đồ thị bậc 3",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Đường tiệm cận (Đứng, Ngang & Tiệm cận xiên)",
+            "note": "Tiệm cận xiên hàm phân thức bậc 2/1",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tính đơn điệu của hàm số (Đồng biến, Nghịch biến)",
+            "note": "Khoảng đồng biến của hàm đa thức",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Cực trị hàm số (Hàm bậc 3, phân thức, tham số m)",
+            "note": "Điểm cực tiểu của hàm số",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Giá trị lớn nhất và Giá trị nhỏ nhất (GTLN - GTNN)",
+            "note": "GTNN trên khoảng dương",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tương giao đồ thị và số nghiệm phương trình f(x) = m",
+            "note": "Số giao điểm của đồ thị và trục Ox",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Nhận dạng Đồ thị hàm bậc 3, hàm phân thức, hàm f'(x)",
+            "note": "Đồ thị đạo hàm f'(x)",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tương giao đồ thị và số nghiệm phương trình f(x) = m",
+            "note": "Biện luận số nghiệm",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần II",
+        "subtitle": "Đúng / Sai",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Nhận dạng Đồ thị hàm bậc 3, hàm phân thức, hàm f'(x)",
+            "note": "Khảo sát toàn diện hàm số bậc ba (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Đường tiệm cận (Đứng, Ngang & Tiệm cận xiên)",
+            "note": "Hàm phân thức bậc 2/1 tiệm cận xiên (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Bài toán tối ưu hóa kinh tế & đời sống thực tế",
+            "note": "Bài toán tối ưu chi phí nguyên vật liệu (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần III",
+        "subtitle": "Trả lời ngắn",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Cực trị hàm số (Hàm bậc 3, phân thức, tham số m)",
+            "note": "Tìm m để hàm số có 2 cực trị x1, x2 thỏa mãn x1^2+x2^2 = 5",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Giá trị lớn nhất và Giá trị nhỏ nhất (GTLN - GTNN)",
+            "note": "GTLN của hàm trị tuyệt đối trên đoạn [-1; 2]",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Tương giao đồ thị và số nghiệm phương trình f(x) = m",
+            "note": "Số giá trị nguyên m để phương trình có 4 nghiệm",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Khảo sát hàm số, Đạo hàm & Đồ thị",
+            "topic": "Bài toán tối ưu hóa kinh tế & đời sống thực tế",
+            "note": "Bài toán tối ưu chi phí làm mương dẫn nước",
+            "nb": 0,
+            "th": 0,
+            "vd": 0,
+            "vdc": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_hhkg_oxyz",
+    "title": "Chuyên đề Hình học Không gian & Tọa độ Oxyz",
+    "desc": "Chuyên đề Hình học: 8 MCQ + 3 Đúng/Sai + 4 Trả lời ngắn = 15 câu (10.00đ, 60 phút)",
+    "duration": 60,
+    "grade": "Toán 12 - Tốt nghiệp THPT 2026",
+    "selected_topics": [
+      "hh_goc",
+      "hh_nhi_dien",
+      "hh_khoang_cach",
+      "hh_the_tich",
+      "hh_the_tich_lt",
+      "oxyz_vecto",
+      "oxyz_mat_phang",
+      "oxyz_duong_thang",
+      "oxyz_mat_cau",
+      "oxyz_thuc_te"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần I",
+        "subtitle": "Một lựa chọn đúng",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Góc giữa 2 đường thẳng, góc giữa đường thẳng và mặt phẳng",
+            "note": "Góc giữa SC và mặt đáy",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối chóp có cạnh bên vuông góc đáy, khối chóp đều",
+            "note": "Thể tích chóp đáy vuông",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Tọa độ điểm, Vectơ, Tích vô hướng & Tích có hướng",
+            "note": "Tọa độ tích có hướng",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Vectơ pháp tuyến mặt phẳng",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt cầu (S), tiếp diện và giao tuyến",
+            "note": "Tâm và bán kính mặt cầu",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Đường thẳng d & Vị trí tương đối",
+            "note": "Vectơ chỉ phương đường thẳng",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Khoảng cách điểm đến mặt phẳng, khoảng cách 2 đường chéo nhau",
+            "note": "Khoảng cách giữa 2 đường chéo nhau",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Góc (đường-mặt, 2 mặt) & Khoảng cách 2 đường chéo nhau",
+            "note": "Góc giữa đường thẳng và mặt phẳng trong Oxyz",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần II",
+        "subtitle": "Đúng / Sai",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Thể tích khối lăng trụ, hình hộp chữ nhật, hình lập phương",
+            "note": "Hình chóp và khối lăng trụ đều (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Mô hình Oxyz thực tế (Radar, máy bay, kiến trúc)",
+            "note": "Mô hình radar phát hiện tàu thuyền (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Mặt phẳng tiếp xúc mặt cầu và khoảng cách (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần III",
+        "subtitle": "Trả lời ngắn",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Hình học Không gian cổ điển",
+            "topic": "Khoảng cách điểm đến mặt phẳng, khoảng cách 2 đường chéo nhau",
+            "note": "Khoảng cách từ điểm đến mặt phẳng",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt cầu (S), tiếp diện và giao tuyến",
+            "note": "Bán kính mặt cầu tiếp xúc cả 3 trục tọa độ",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Đường thẳng d & Vị trí tương đối",
+            "note": "Đường vuông góc chung của 2 đường thẳng chéo nhau",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Mô hình Oxyz thực tế (Radar, máy bay, kiến trúc)",
+            "note": "Khoảng cách ngắn nhất giữa hai máy bay đang bay",
+            "nb": 0,
+            "th": 0,
+            "vd": 0,
+            "vdc": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_menh_de_to_hop",
+    "title": "Chuyên đề Mệnh đề, Tập hợp & Đại số tổ hợp",
+    "desc": "Chuyên đề cơ bản: 10 MCQ + 2 Đúng/Sai + 4 Trả lời ngắn = 16 câu (10.00đ, 60 phút)",
+    "duration": 60,
+    "grade": "Toán 10 & 11 - GDPT 2018",
+    "selected_topics": [
+      "md_menh_de",
+      "md_tap_hop",
+      "md_sai_so",
+      "th_quy_tac_dem",
+      "th_hoan_vi_chinh_hop",
+      "th_nhi_thuc_newton"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần 1",
+        "subtitle": "Phần 1",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Mệnh đề & Mệnh đề chứa biến",
+            "note": "Mệnh đề phủ định và tính đúng sai",
+            "nb": 1,
+            "th": 1,
+            "vd": 1,
+            "vdc": 1
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "Giao, hợp, hiệu của hai tập hợp số",
+            "nb": 1,
+            "th": 1,
+            "vd": 1,
+            "vdc": 1
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Quy tắc đếm (Quy tắc cộng & Quy tắc nhân)",
+            "note": "Bài toán chọn đồ vật hoặc lập số",
+            "nb": 1,
+            "th": 1,
+            "vd": 1,
+            "vdc": 1
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Hoán vị, chỉnh hợp và tổ hợp",
+            "note": "Chọn k phần tử từ n phần tử",
+            "nb": 0,
+            "th": 2,
+            "vd": 2,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Nhị thức Newton",
+            "note": "Hệ số của số hạng trong khai triển",
+            "nb": 0,
+            "th": 2,
+            "vd": 2,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần 2",
+        "subtitle": "Phần 2",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "Bài toán thực tế dùng biểu đồ Ven (4 ý)",
+            "nb": 0,
+            "th": 1,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Hoán vị, chỉnh hợp và tổ hợp",
+            "note": "Ứng dụng tổ hợp xác suất trong đời sống (4 ý)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 1
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần 3",
+        "subtitle": "Phần 3",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Quy tắc đếm (Quy tắc cộng & Quy tắc nhân)",
+            "note": "Bài toán đếm và tổ hợp nâng cao",
+            "nb": 0,
+            "th": 0,
+            "vd": 2,
+            "vdc": 2
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "Tập hợp số và bài toán chứa tham số m",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_1793950473004",
+    "title": "Ma trận Đề thi Mới",
+    "desc": "Cấu trúc: 22 câu (10.00đ), 90 phút",
+    "duration": 90,
+    "grade": "Toán 12 - Tốt nghiệp THPT 2026",
+    "selected_topics": [
+      "md_menh_de",
+      "md_tap_hop",
+      "md_sai_so",
+      "th_quy_tac_dem",
+      "th_hoan_vi_chinh_hop",
+      "th_nhi_thuc_newton"
+    ],
+    "sections": [
+      {
+        "id": "sec_1",
+        "title": "Phần I",
+        "subtitle": "Một lựa chọn đúng",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Mệnh đề & Mệnh đề chứa biến",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Số gần đúng và sai số",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Quy tắc đếm (Quy tắc cộng & Quy tắc nhân)",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Hoán vị, chỉnh hợp và tổ hợp",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Nhị thức Newton",
+            "note": "",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_2",
+        "title": "Phần II",
+        "subtitle": "Đúng / Sai",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Mệnh đề & Mệnh đề chứa biến",
+            "note": "Bài toán thực tế 4 ý a,b,c,d",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "Bài toán thực tế 4 ý a,b,c,d",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Số gần đúng và sai số",
+            "note": "Bài toán thực tế 4 ý a,b,c,d",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Quy tắc đếm (Quy tắc cộng & Quy tắc nhân)",
+            "note": "Bài toán thực tế 4 ý a,b,c,d",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_3",
+        "title": "Phần III",
+        "subtitle": "Trả lời ngắn",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Mệnh đề & Mệnh đề chứa biến",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Tập hợp và các phép toán trên tập hợp",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Mệnh đề & Tập hợp",
+            "topic": "Số gần đúng và sai số",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Quy tắc đếm (Quy tắc cộng & Quy tắc nhân)",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Hoán vị, chỉnh hợp và tổ hợp",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Đại số tổ hợp & Nhị thức Newton",
+            "topic": "Nhị thức Newton",
+            "note": "Đáp số nguyên hoặc thập phân gọn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      }
+    ],
+    "updated_at": "06/11/2026 14:34"
+  }
+]
