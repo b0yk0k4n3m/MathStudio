@@ -1009,7 +1009,7 @@ def main_page():
         with ui.tabs().classes("w-full text-sm font-semibold") as about_sub_tabs:
             at_prod = ui.tab("🌟 Giới thiệu Sản phẩm")
             at_author = ui.tab("👨‍🏫 Tác giả & Định hướng")
-            at_format = ui.tab("📊 Cấu trúc Đề THPT 2026")
+            at_format = ui.tab("📊 Chuẩn Đề THPT 2026 & CV 7991")
 
         with ui.tab_panels(about_sub_tabs, value=at_prod).classes("w-full p-1"):
             # TAB 1: SẢN PHẨM
@@ -1023,15 +1023,15 @@ def main_page():
                                 "text-base font-bold text-blue-900"
                             )
                             ui.label(
-                                "Giải pháp chuyển đổi số toàn diện cho công tác khảo thí, ra đề thi và ôn luyện Toán THPT."
+                                "Tích hợp đồng thời Chuẩn Đề Tốt nghiệp THPT 2026 và Chuẩn Kiểm tra Định kỳ Công văn 7991/BGDĐT-GDTrH."
                             ).classes("text-xs text-slate-700")
-                        ui.badge("Phiên bản THPT 2026", color="blue-700").classes("text-xs px-3 py-1 font-bold")
+                        ui.badge("GDPT 2018 - CV 7991", color="blue-700").classes("text-xs px-3 py-1 font-bold")
 
                 with ui.grid(columns=2).classes("w-full gap-3"):
                     features = [
                         (
-                            "🎯 Chuẩn hóa Ma trận GDPT 2018",
-                            "Tự động xây dựng đề bám sát tuyệt đối ma trận năng lực theo 4 mức độ: Nhận biết, Thông hiểu, Vận dụng và Vận dụng cao.",
+                            "🎯 Chuẩn hóa Ma trận GDPT 2018 & CV 7991",
+                            "Tự động xây dựng đề bám sát tuyệt đối ma trận năng lực theo 3 mức độ: Biết, Hiểu, Vận dụng và xuất Khung Ma trận (PL1) - Bản đặc tả (PL2).",
                         ),
                         (
                             "📐 Thẩm định Toán học Độc lập",
@@ -1071,8 +1071,8 @@ def main_page():
                     ui.label(
                         "Math Studio được phát triển với tâm huyết đồng hành cùng quý thầy cô giáo viên, tổ chuyên môn và học sinh "
                         "trên cả nước trong quá trình đổi mới căn bản, toàn diện giáo dục theo Chương trình GDPT 2018. "
-                        "Hệ thống giúp tiết kiệm hàng chục giờ đồng hồ soạn thảo, chuẩn hóa quy trình ra đề, tự động hóa khâu vẽ hình, "
-                        "thẩm định tính đúng đắn toán học và xuất bản văn bản Word chuyên nghiệp."
+                        "Hệ thống giúp tiết kiệm hàng chục giờ đồng hồ soạn thảo, chuẩn hóa quy trình ra đề theo Công văn 7991/BGDĐT-GDTrH, "
+                        "tự động hóa khâu vẽ hình, thẩm định tính đúng đắn toán học và xuất bản văn bản Word chuyên nghiệp."
                     ).classes("text-xs text-slate-700 leading-relaxed text-justify")
 
                     with ui.row().classes(
@@ -1085,39 +1085,57 @@ def main_page():
                             )
                         ui.badge("Bản quyền © 2026", color="slate-200").classes("text-slate-700 text-xs font-bold")
 
-            # TAB 3: CẤU TRÚC ĐỀ THPT 2026
+            # TAB 3: CẤU TRÚC ĐỀ THPT 2026 & CÔNG VĂN 7991
             with ui.tab_panel(at_format).classes("p-0 gap-3 flex flex-col"):
-                with ui.card().classes("w-full p-3.5 rounded-xl border border-blue-200 bg-blue-50/70 gap-1.5"):
-                    ui.label("Cấu trúc Đề thi Tốt nghiệp THPT 2026 (Bộ GD&ĐT)").classes(
-                        "text-sm font-bold text-blue-900"
-                    )
-                    ui.label(
-                        "Thời gian làm bài: 90 phút | Tổng số câu: 22 câu | Tổng điểm: 10.00 điểm"
-                    ).classes("text-xs text-slate-700 font-medium")
+                with ui.tabs().classes("w-full text-xs font-bold") as sub_fmt_tabs:
+                    ft_7991 = ui.tab("📋 Đề Định Kỳ CV 7991 (70% TN + 30% TL)")
+                    ft_2026 = ui.tab("🎓 Đề Tốt Nghiệp THPT 2026 (100% TN)")
 
-                parts_info = [
-                    (
-                        "PHẦN I: Trắc nghiệm Nhiều lựa chọn",
-                        "12 câu (Câu 1 đến Câu 12) • 3.0 điểm (0.25đ / câu)",
-                        "Mỗi câu hỏi có 4 phương án lựa chọn A, B, C, D; thí sinh chọn 1 phương án đúng duy nhất. Đánh giá năng lực Nhận biết và Thông hiểu kiến thức trọng tâm.",
-                    ),
-                    (
-                        "PHẦN II: Trắc nghiệm Đúng / Sai",
-                        "4 câu (Câu 1 đến Câu 4) • 4.0 điểm (Tối đa 1.0đ / câu)",
-                        "Mỗi câu là bài toán tự luận tích hợp gồm 4 mệnh đề a, b, c, d xếp theo bậc thang tư duy (NB -> TH -> VD -> VDC). Điểm lũy tiến: Đúng 1 ý = 0.1đ; Đúng 2 ý = 0.25đ; Đúng 3 ý = 0.5đ; Đúng cả 4 ý = 1.0đ.",
-                    ),
-                    (
-                        "PHẦN III: Trắc nghiệm Trả lời ngắn",
-                        "6 câu (Câu 1 đến Câu 6) • 3.0 điểm (0.5đ / câu)",
-                        "Thí sinh tự tính toán và điền kết quả dạng số (nguyên hoặc thập phân) vào phiếu trả lời. Đòi hỏi tư duy Vận dụng giải quyết tình huống toán học và thực tế.",
-                    ),
-                ]
-                for p_name, p_pts, p_desc in parts_info:
-                    with ui.card().classes("p-3 rounded-xl border border-slate-200 bg-white gap-1"):
-                        with ui.row().classes("items-center justify-between w-full"):
-                            ui.label(p_name).classes("text-xs font-bold text-slate-900")
-                            ui.badge(p_pts, color="blue-100").classes("text-blue-800 text-[11px] font-semibold")
-                        ui.label(p_desc).classes("text-xs text-slate-600 leading-relaxed")
+                with ui.tab_panels(sub_fmt_tabs, value=ft_7991).classes("w-full p-0 mt-2"):
+                    # SUB-PANEL 1: CÔNG VĂN 7991/BGDĐT-GDTrH
+                    with ui.tab_panel(ft_7991).classes("p-0 gap-2.5 flex flex-col"):
+                        with ui.card().classes("w-full p-3 rounded-xl border border-indigo-200 bg-indigo-50/70 gap-1"):
+                            ui.label("Chuẩn Công văn 7991/BGDĐT-GDTrH ngày 17/12/2024 (Áp dụng từ HK2 năm học 2024-2025)").classes(
+                                "text-xs font-bold text-indigo-900"
+                            )
+                            ui.label(
+                                "Cấu trúc kết hợp: 70% Trắc nghiệm (7.0đ) + 30% Tự luận (3.0đ) | 90 phút | Bắt buộc Khung Ma trận (PL1) & Bản đặc tả (PL2)"
+                            ).classes("text-[11px] text-slate-700 font-medium")
+
+                        cv_parts = [
+                            ("PHẦN I: Trắc nghiệm Nhiều lựa chọn", "12 câu • 3.0 điểm (0.25đ / câu)", "Mỗi câu 4 phương án chọn 1 đúng. Đánh giá mức độ Biết và Hiểu."),
+                            ("PHẦN II: Trắc nghiệm Đúng / Sai", "2 câu • 2.0 điểm (Tối đa 1.0đ / câu)", "Mỗi câu gồm 4 ý a,b,c,d theo thang nhận thức. Đúng 1 ý: 0.1đ; 2 ý: 0.25đ; 3 ý: 0.5đ; 4 ý: 1.0đ."),
+                            ("PHẦN III: Trắc nghiệm Trả lời ngắn", "4 câu • 2.0 điểm (0.50đ / câu)", "Thí sinh tự tính toán và điền đáp số gọn gàng. Đánh giá mức độ Hiểu và Vận dụng."),
+                            ("PHẦN IV: Tự luận", "2 - 3 bài toán • 3.0 điểm", "Trình bày các bước lập luận, giải toán chi tiết, mô hình hóa toán học giải quyết vấn đề thực tiễn."),
+                        ]
+                        for p_n, p_s, p_d in cv_parts:
+                            with ui.card().classes("p-2.5 rounded-xl border border-slate-200 bg-white gap-0.5"):
+                                with ui.row().classes("items-center justify-between w-full"):
+                                    ui.label(p_n).classes("text-xs font-bold text-slate-900")
+                                    ui.badge(p_s, color="indigo-100").classes("text-indigo-800 text-[10px] font-semibold")
+                                ui.label(p_d).classes("text-[11px] text-slate-600 leading-snug")
+
+                    # SUB-PANEL 2: ĐỀ TỐT NGHIỆP THPT 2026
+                    with ui.tab_panel(ft_2026).classes("p-0 gap-2.5 flex flex-col"):
+                        with ui.card().classes("w-full p-3 rounded-xl border border-blue-200 bg-blue-50/70 gap-1"):
+                            ui.label("Chuẩn Đề thi Tốt nghiệp THPT từ năm 2025 - 2026 (Bộ GD&ĐT)").classes(
+                                "text-xs font-bold text-blue-900"
+                            )
+                            ui.label("Cấu trúc: 100% Trắc nghiệm khách quan | 22 câu | 10.00 điểm | 90 phút").classes(
+                                "text-[11px] text-slate-700 font-medium"
+                            )
+
+                        parts_info = [
+                            ("PHẦN I: Trắc nghiệm Nhiều lựa chọn", "12 câu • 3.0 điểm (0.25đ / câu)", "Mỗi câu 4 phương án chọn 1 đúng. Đánh giá năng lực Nhận biết và Thông hiểu."),
+                            ("PHẦN II: Trắc nghiệm Đúng / Sai", "4 câu • 4.0 điểm (Tối đa 1.0đ / câu)", "Mỗi câu gồm 4 ý a,b,c,d. Điểm lũy tiến: Đúng 1 ý: 0.1đ; 2 ý: 0.25đ; 3 ý: 0.5đ; 4 ý: 1.0đ."),
+                            ("PHẦN III: Trắc nghiệm Trả lời ngắn", "6 câu • 3.0 điểm (0.50đ / câu)", "Thí sinh tự tính toán và điền kết quả dạng số (nguyên hoặc thập phân tối đa 4 ký tự)."),
+                        ]
+                        for p_name, p_pts, p_desc in parts_info:
+                            with ui.card().classes("p-2.5 rounded-xl border border-slate-200 bg-white gap-0.5"):
+                                with ui.row().classes("items-center justify-between w-full"):
+                                    ui.label(p_name).classes("text-xs font-bold text-slate-900")
+                                    ui.badge(p_pts, color="blue-100").classes("text-blue-800 text-[10px] font-semibold")
+                                ui.label(p_desc).classes("text-[11px] text-slate-600 leading-snug")
 
     # -----------------------------------------------------------------
     # HỘP THOẠI CÂY CHUYÊN ĐỀ RIÊNG BIỆT (MODAL DIALOG - TOPIC TREE)
@@ -1133,7 +1151,7 @@ def main_page():
         if sections is None:
             sections = state.get("matrix_sections", [])
         total_q = 0
-        p1_q, p2_q, p3_q = 0, 0, 0
+        p1_q, p2_q, p3_q, p4_q = 0, 0, 0, 0
         total_nb, total_th, total_vd, total_vdc = 0, 0, 0, 0
 
         for sec in sections:
@@ -1153,6 +1171,8 @@ def main_page():
                 p1_q += s_tot
             elif "Đúng" in sec_type:
                 p2_q += s_tot
+            elif "Tự luận" in sec_type:
+                p4_q += s_tot
             else:
                 p3_q += s_tot
 
@@ -1160,12 +1180,14 @@ def main_page():
             state["mcq"] = p1_q
             state["tf"] = p2_q
             state["sa"] = p3_q
-        points = p1_q * 0.25 + p2_q * 1.0 + p3_q * 0.5
+            state["essay"] = p4_q
+        points = p1_q * 0.25 + p2_q * 1.0 + p3_q * 0.5 + p4_q * 1.5
         return {
             "total_q": total_q,
             "p1_q": p1_q,
             "p2_q": p2_q,
             "p3_q": p3_q,
+            "p4_q": p4_q,
             "points": points,
             "nb": total_nb,
             "th": total_th,
@@ -1271,7 +1293,7 @@ def main_page():
                                         s_vd = sum(int(r.get("vd") or 0) for r in sec.get("rows", []))
                                         s_vdc = sum(int(r.get("vdc") or 0) for r in sec.get("rows", []))
                                         s_tot = s_nb + s_th + s_vd + s_vdc
-                                        pts = s_tot * 0.25 if "Một lựa chọn" in sec.get("type", "") else (s_tot * 1.0 if "Đúng" in sec.get("type", "") else s_tot * 0.5)
+                                        pts = s_tot * 0.25 if "Một lựa chọn" in sec.get("type", "") else (s_tot * 1.0 if "Đúng" in sec.get("type", "") else (s_tot * 1.5 if "Tự luận" in sec.get("type", "") else s_tot * 0.5))
                                         with ui.row().classes("w-full items-center justify-between py-0.5 border-b border-blue-50 last:border-0"):
                                             ui.label(f"• {sec.get('title', 'Phần')} ({sec.get('type', '')}):").classes("font-semibold text-slate-800 truncate max-w-[210px]")
                                             ui.label(f"{len(sec.get('rows', []))} CĐ | {s_tot} câu ({pts:.2f}đ)").classes("font-mono text-[11px] text-blue-800")

@@ -253,6 +253,357 @@
     ]
   },
   {
+    "id": "mat_dinh_ky_cv7991_giua_hk2",
+    "title": "Kiểm tra Giữa kỳ II Toán 12 (Chuẩn Công văn 7991/BGDĐT-GDTrH)",
+    "desc": "Chuẩn CV 7991: 70% Trắc nghiệm (12 MCQ [3.0đ] + 2 Đúng/Sai [2.0đ] + 4 Trả lời ngắn [2.0đ]) + 30% Tự luận (2 bài [3.0đ]) = 20 câu (10.00đ) - 90 phút",
+    "duration": 90,
+    "grade": "Toán 12 - Giữa HK2 (CV 7991)",
+    "selected_topics": [
+      "tp_nguyen_ham",
+      "tp_xac_dinh",
+      "tp_dien_tich",
+      "tp_chuyen_dong",
+      "oxyz_vecto",
+      "oxyz_mat_phang",
+      "oxyz_duong_thang",
+      "xs_dieu_kien",
+      "xs_toan_phan_bayes"
+    ],
+    "sections": [
+      {
+        "id": "sec_cv7991_p1",
+        "title": "Phần I",
+        "subtitle": "Trắc nghiệm nhiều lựa chọn (12 câu - 3.0đ)",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Nguyên hàm & Bảng nguyên hàm hàm số cơ bản",
+            "note": "Nhận biết công thức nguyên hàm cơ bản và tính chất",
+            "nb": 2,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Tích phân xác định & Tính chất tích phân",
+            "note": "Tính chất tích phân, tính tích phân hàm đa thức/lượng giác/mũ",
+            "nb": 2,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Tọa độ điểm, Vectơ, Tích vô hướng & Tích có hướng",
+            "note": "Tìm tọa độ vectơ, tích vô hướng, độ dài vectơ trong Oxyz",
+            "nb": 2,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Vectơ pháp tuyến của mặt phẳng, phương trình mặt phẳng đi qua 1 điểm",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Xác suất có điều kiện P(A|B)",
+            "note": "Nhận biết và tính xác suất có điều kiện theo định nghĩa cơ bản",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cv7991_p2",
+        "title": "Phần II",
+        "subtitle": "Trắc nghiệm Đúng / Sai (2 câu - 2.0đ)",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Tính diện tích hình phẳng",
+            "note": "Bài toán ứng dụng tích phân tính diện tích hình phẳng giới hạn bởi parabol và đường thẳng (gồm 4 mệnh đề a, b, c, d từ nhận biết đến vận dụng)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Mô hình hình học không gian Oxyz: Xác định vectơ pháp tuyến, viết phương trình mặt phẳng và tính khoảng cách từ điểm đến mặt phẳng (4 mệnh đề a, b, c, d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cv7991_p3",
+        "title": "Phần III",
+        "subtitle": "Trắc nghiệm trả lời ngắn (4 câu - 2.0đ)",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Tích phân xác định & Tính chất tích phân",
+            "note": "Tính giá trị tích phân I = int_a^b f(x)dx từ biểu thức đạo hàm",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Bài toán thực tế chuyển động (vận tốc, quãng đường)",
+            "note": "Mô hình vận tốc v(t), tính quãng đường di chuyển được s(t) sau thời gian t",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Tọa độ điểm, Vectơ, Tích vô hướng & Tích có hướng",
+            "note": "Tính khoảng cách hoặc góc giữa hai vectơ/hai đối tượng trong không gian Oxyz",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Công thức xác suất toàn phần & Công thức Bayes",
+            "note": "Tính xác suất theo công thức toàn phần hoặc Bayes trong bài toán thực tế",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cv7991_p4",
+        "title": "Phần IV",
+        "subtitle": "Tự luận (2 bài - 3.0đ)",
+        "type": "Tự luận",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Thể tích khối tròn xoay & vật thể",
+            "note": "Bài 1 (1.5đ): Tính thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi các đường cong quanh trục Ox. Yêu cầu lập luận chi tiết các bước thiết lập tích phân và tính kết quả.",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Mô hình Oxyz thực tế (Radar, máy bay, kiến trúc)",
+            "note": "Bài 2 (1.5đ): Bài toán ứng dụng Oxyz thực tế (gắn hệ trục tọa độ vào mô hình kiến trúc/chuyển động, lập phương trình mặt phẳng mái nhà và tính góc dốc/khoảng cách an toàn).",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat_dinh_ky_cv7991_cuoi_hk2",
+    "title": "Kiểm tra Cuối kỳ II Toán 12 (Chuẩn Công văn 7991/BGDĐT-GDTrH)",
+    "desc": "Chuẩn CV 7991: 70% Trắc nghiệm (12 MCQ [3.0đ] + 2 Đúng/Sai [2.0đ] + 4 Trả lời ngắn [2.0đ]) + 30% Tự luận (2 bài [3.0đ]) = 20 câu (10.00đ) - 90 phút",
+    "duration": 90,
+    "grade": "Toán 12 - Cuối HK2 (CV 7991)",
+    "selected_topics": [
+      "tp_nguyen_ham",
+      "tp_xac_dinh",
+      "tp_dien_tich",
+      "tp_the_tich",
+      "tp_chuyen_dong",
+      "oxyz_vecto",
+      "oxyz_mat_phang",
+      "oxyz_duong_thang",
+      "oxyz_mat_cau",
+      "oxyz_goc_kc",
+      "xs_dieu_kien",
+      "xs_toan_phan_bayes",
+      "xs_thuc_te"
+    ],
+    "sections": [
+      {
+        "id": "sec_cuoi_p1",
+        "title": "Phần I",
+        "subtitle": "Trắc nghiệm nhiều lựa chọn (12 câu - 3.0đ)",
+        "type": "Một lựa chọn đúng",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Nguyên hàm & Bảng nguyên hàm hàm số cơ bản",
+            "note": "Nguyên hàm cơ bản, tìm F(x) thỏa mãn điều kiện F(x0)=y0",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Tích phân xác định & Tính chất tích phân",
+            "note": "Tính chất tích phân tuyến tính, chèn cận tích phân",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt phẳng (P) & Khoảng cách",
+            "note": "Phương trình mặt phẳng đoạn chắn, khoảng cách từ điểm đến mặt phẳng",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Đường thẳng d & Vị trí tương đối",
+            "note": "Vectơ chỉ phương của đường thẳng, phương trình chính tắc và tham số",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Mặt cầu (S), tiếp diện và giao tuyến",
+            "note": "Xác định tâm và bán kính mặt cầu từ phương trình khai triển",
+            "nb": 1,
+            "th": 0,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Công thức xác suất toàn phần & Công thức Bayes",
+            "note": "Nhận biết sơ đồ cây và tính xác suất theo công thức toàn phần",
+            "nb": 1,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cuoi_p2",
+        "title": "Phần II",
+        "subtitle": "Trắc nghiệm Đúng / Sai (2 câu - 2.0đ)",
+        "type": "Đúng / Sai",
+        "rows": [
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Phương trình Đường thẳng d & Vị trí tương đối",
+            "note": "Vị trí tương đối giữa đường thẳng và mặt phẳng, hình chiếu vuông góc (4 mệnh đề a, b, c, d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Bài toán thực tế: Xét nghiệm y tế, tỷ lệ lỗi phân xưởng",
+            "note": "Mô hình xét nghiệm y tế hoặc kiểm soát chất lượng sản phẩm bằng công thức Bayes (4 mệnh đề a, b, c, d)",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cuoi_p3",
+        "title": "Phần III",
+        "subtitle": "Trắc nghiệm trả lời ngắn (4 câu - 2.0đ)",
+        "type": "Trả lời ngắn",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Tính diện tích hình phẳng",
+            "note": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số và các trục tọa độ",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Bài toán thực tế chuyển động (vận tốc, quãng đường)",
+            "note": "Bài toán chuyển động biến đổi đều, tìm quãng đường đến khi dừng hẳn",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Góc (đường-mặt, 2 mặt) & Khoảng cách 2 đường chéo nhau",
+            "note": "Tính khoảng cách giữa hai đường thẳng chéo nhau trong không gian Oxyz",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          },
+          {
+            "category": "Thống kê & Xác suất có điều kiện",
+            "topic": "Công thức xác suất toàn phần & Công thức Bayes",
+            "note": "Tính xác suất hậu nghiệm theo công thức Bayes, làm tròn đến hàng phần trăm",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          }
+        ]
+      },
+      {
+        "id": "sec_cuoi_p4",
+        "title": "Phần IV",
+        "subtitle": "Tự luận (2 bài - 3.0đ)",
+        "type": "Tự luận",
+        "rows": [
+          {
+            "category": "Nguyên hàm, Tích phân & Ứng dụng",
+            "topic": "Ứng dụng hình học: Thể tích khối tròn xoay & vật thể",
+            "note": "Bài 1 (1.5đ): Bài toán tự luận tính thể tích chi tiết máy dạng khối tròn xoay. Lập luận công thức tích phân và giải chi tiết.",
+            "nb": 0,
+            "th": 1,
+            "vd": 0,
+            "vdc": 0
+          },
+          {
+            "category": "Phương pháp Tọa độ trong Không gian Oxyz",
+            "topic": "Mô hình Oxyz thực tế (Radar, máy bay, kiến trúc)",
+            "note": "Bài 2 (1.5đ): Bài toán tự luận mô hình hóa trạm radar phát hiện máy bay trong không gian Oxyz (tính cự ly gần nhất, vị trí tiếp xúc mặt cầu phủ sóng).",
+            "nb": 0,
+            "th": 0,
+            "vd": 1,
+            "vdc": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "mat_giua_ky_1",
     "title": "Kiểm tra Giữa Học kỳ 1 (Hàm số & HHKG)",
     "desc": "Kiểm tra định kỳ giữa HK1: 6 MCQ + 2 Đúng/Sai + 3 Trả lời ngắn = 11 câu (10.00đ, 45 phút)",

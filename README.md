@@ -2,16 +2,17 @@
 
 # 📐 Math Studio
 
-### Hệ Thống Biên Soạn, Thẩm Định Toán Học & Xuất Bản Đề Thi THPT 2026
+### Hệ Thống Biên Soạn, Thẩm Định Toán Học & Xuất Bản Đề Thi THPT (Chuẩn THPT 2026 & Công Văn 7991)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-informational.svg?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Program](https://img.shields.io/badge/Chương_trình-GDPT_2018-success.svg?style=for-the-badge)](https://moet.gov.vn/)
-[![Format](https://img.shields.io/badge/Cấu_trúc-THPT_2026-orange.svg?style=for-the-badge)](https://moet.gov.vn/)
+[![Directive](https://img.shields.io/badge/Định_kỳ-CV_7991%2FBGDĐT-red.svg?style=for-the-badge)](https://moet.gov.vn/)
+[![Format](https://img.shields.io/badge/Tốt_nghiệp-THPT_2026-orange.svg?style=for-the-badge)](https://moet.gov.vn/)
 [![UI](https://img.shields.io/badge/Giao_diện-NiceGUI_Web-purple.svg?style=for-the-badge)](https://nicegui.io/)
 
 <p align="center">
-  <b>Giải pháp tự động hóa toàn diện quy trình thiết kế ma trận, biên soạn câu hỏi, kiểm định nghiệm chính xác tuyệt đối và xuất bản đề thi Microsoft Word (.docx) bản địa.</b>
+  <b>Giải pháp tự động hóa toàn diện quy trình thiết kế ma trận, biên soạn câu hỏi, kiểm định nghiệm chính xác tuyệt đối và xuất bản đề thi Microsoft Word (.docx) bản địa theo chuẩn Tốt nghiệp THPT 2026 & Công văn 7991/BGDĐT-GDTrH.</b>
 </p>
 
 [✨ Tính Năng Nổi Bật](#-tính-năng-nổi-bật) •
@@ -27,10 +28,12 @@
 
 ## 🌟 Giới Thiệu Chung
 
-**Math Studio** là nền tảng công nghệ giáo dục chuyên sâu (EdTech) phục vụ công tác khảo thí, ra đề thi và ôn luyện môn Toán bậc THPT. Ứng dụng bám sát 100% định hướng đổi mới của **Chương trình Giáo dục Phổ thông 2018** và cấu trúc kỳ thi **Tốt nghiệp THPT từ năm 2025 – 2026** ban hành bởi Bộ Giáo dục & Đào tạo.
+**Math Studio** là nền tảng công nghệ giáo dục chuyên sâu (EdTech) phục vụ công tác khảo thí, ra đề thi và ôn luyện môn Toán bậc THPT. Ứng dụng bám sát 100% định hướng đổi mới của **Chương trình Giáo dục Phổ thông 2018**, tích hợp đồng thời hai chuẩn khảo thí trọng tâm của Bộ Giáo dục & Đào tạo:
+- 🎓 **Cấu trúc Đề thi Tốt nghiệp THPT từ năm 2025 – 2026** (100% trắc nghiệm khách quan).
+- 📋 **Quy định Kiểm tra Định kỳ theo Công văn 7991/BGDĐT-GDTrH ngày 17/12/2024** (70% Trắc nghiệm + 30% Tự luận, kèm Phụ lục 1 Khung Ma trận & Phụ lục 2 Bản đặc tả, áp dụng từ Học kỳ II năm học 2024 – 2025).
 
 Hệ thống giải quyết triệt để các thách thức lớn nhất của giáo viên khi ra đề:
-- ⏳ **Tiết kiệm hàng chục giờ soạn thảo:** Tự động tạo câu hỏi theo đúng ma trận nhận thức 4 mức độ.
+- ⏳ **Tiết kiệm hàng chục giờ soạn thảo:** Tự động tạo câu hỏi theo đúng ma trận nhận thức và xuất bản đặc tả chi tiết.
 - 🎯 **Triệt tiêu lỗi sai đề:** Giải nghiệm hình thức tự động, chống nhầm lẫn, trùng đáp án hoặc số liệu vô lý.
 - 📐 **Chuẩn mực vẽ hình sư phạm:** Tự động vẽ đồ thị hàm số và hình học không gian chuẩn nét SGK.
 - 📝 **Công thức Word chuẩn bản địa:** Xuất file `.docx` chứa công thức toán dạng Equation gốc (OMML), có thể nhấp đúp chỉnh sửa trực tiếp không qua ảnh chụp.
@@ -39,11 +42,15 @@ Hệ thống giải quyết triệt để các thách thức lớn nhất của 
 
 ## ✨ Tính Năng Nổi Bật
 
-### 1. 🎯 Chuẩn Cấu Trúc Đề Thi Tốt Nghiệp THPT 2026
-Tự động phân bổ cấu trúc đề chuẩn gồm **22 câu hỏi – 90 phút – 10.00 điểm**:
-- **PHẦN I (12 câu - 3.0 điểm):** Trắc nghiệm 4 phương án (A, B, C, D) chọn 1 đáp án đúng (0.25đ/câu), đánh giá năng lực *Nhận biết* và *Thông hiểu*.
-- **PHẦN II (4 câu - 4.0 điểm):** Trắc nghiệm Đúng/Sai dạng bài toán tự luận tích hợp 4 mệnh đề $a), b), c), d)$ theo thang tư duy (NB $\rightarrow$ TH $\rightarrow$ VD $\rightarrow$ VDC). Áp dụng quy tắc điểm lũy tiến: Đúng 1 ý = 0.1đ; Đúng 2 ý = 0.25đ; Đúng 3 ý = 0.5đ; Đúng 4 ý = 1.0đ.
-- **PHẦN III (6 câu - 3.0 điểm):** Trắc nghiệm trả lời ngắn (0.5đ/câu), đánh giá năng lực *Vận dụng* giải quyết tình huống thực tế, kết quả số gọn gàng.
+### 1. 🎯 Chuẩn Hóa Cả 2 Định Dạng Khảo Thí Cốt Lõi (Bộ GD&ĐT)
+- **Đề kiểm tra định kỳ (CV 7991/BGDĐT-GDTrH):**
+  - Cấu trúc kết hợp: **70% Trắc nghiệm khách quan (7.0đ) + 30% Tự luận (3.0đ)**.
+  - Trắc nghiệm gồm: 12 câu Nhiều lựa chọn (3.0đ) + 2 câu Đúng/Sai (2.0đ) + 4 câu Trả lời ngắn (2.0đ).
+  - Tự luận gồm: 2 bài toán (3.0đ) giải chi tiết và mô hình hóa thực tiễn.
+  - Tự động đồng bộ và xuất bản **Phụ lục 1 (Khung Ma trận)** và **Phụ lục 2 (Bản đặc tả)** chuẩn xác 100%.
+- **Đề thi Tốt nghiệp THPT 2026:**
+  - Cấu trúc 100% trắc nghiệm: 12 câu Nhiều lựa chọn (3.0đ) + 4 câu Đúng/Sai (4.0đ) + 6 câu Trả lời ngắn (3.0đ) = 22 câu (10.00đ).
+  - Áp dụng chuẩn thang điểm lũy tiến cho dạng Đúng/Sai (Đúng 1 ý = 0.1đ; 2 ý = 0.25đ; 3 ý = 0.5đ; 4 ý = 1.0đ).
 
 ### 2. 📐 Thẩm Định Toán Học Độc Lập
 - Tự động thiết lập mã kiểm định giải nghiệm đại số, đạo hàm, tích phân, tọa độ $Oxyz$ và hình học không gian.
