@@ -23,9 +23,35 @@ if exist "venv\Scripts\python.exe" (
     )
 )
 
+:: Neu chua co venv va PATH chua nhan, tu dong tim trong cac thu muc cai dat mac dinh
 if "%PY_EXE%"=="" (
-    echo [ERROR] Chua co moi truong Python hoac venv!
-    echo [TIP]   Vui long nhap dup file 'install.bat' de cai dat tu dong 1-click.
+    for %%p in (
+        "%LOCALAPPDATA%\Programs\Python\Python312\python.exe"
+        "%LOCALAPPDATA%\Programs\Python\Python311\python.exe"
+        "%LOCALAPPDATA%\Programs\Python\Python310\python.exe"
+        "%ProgramFiles%\Python312\python.exe"
+        "%ProgramFiles%\Python311\python.exe"
+        "%ProgramFiles%\Python310\python.exe"
+        "C:\Python312\python.exe"
+        "C:\Python311\python.exe"
+        "C:\Python310\python.exe"
+    ) do (
+        if exist %%p (
+            if "!PY_EXE!"=="" (
+                set "PY_EXE=%%~p"
+            )
+        )
+    )
+)
+
+if "%PY_EXE%"=="" (
+    echo ====================================================================
+    echo [THONG BAO CHO THAY CO]
+    echo May tinh chua cai dat Python hoac chua thiet lap moi truong Math Studio.
+    echo.
+    echo Thay/Co hay nhap dup chuot vao file 'install.bat' de he thong tu dong
+    echo cai dat moi truong trong 1-2 phut nhe!
+    echo ====================================================================
     echo.
     pause
     exit /b 1

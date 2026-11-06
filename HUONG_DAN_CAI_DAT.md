@@ -1,167 +1,134 @@
 # 🛠️ Hướng Dẫn Cài Đặt Công Cụ & Môi Trường Chạy Math Studio
 
-Tài liệu này hướng dẫn chi tiết từng bước chuẩn bị các công cụ phần mềm cần thiết để khởi chạy và khai thác toàn bộ sức mạnh của hệ thống **Math Studio**, bao gồm môi trường chạy Python, nền tảng Trí tuệ Nhân tạo **Google Antigravity**, công cụ kiểm soát mã nguồn Git và các phần mềm văn phòng hỗ trợ.
+Tài liệu này cung cấp **đầy đủ link tải trực tiếp** và hướng dẫn từng bước cài đặt các công cụ cần thiết để chạy hệ thống **Math Studio**. Hướng dẫn được biên soạn theo phong cách trực quan, gần gũi, giúp các Thầy/Cô giáo dù không chuyên về công nghệ thông tin vẫn có thể dễ dàng cài đặt và sử dụng thành công trong 5 phút.
 
 ---
 
-## 📋 Danh Mục Công Cụ Cần Thiết
+## 🌟 HƯỚNG DẪN 3 BƯỚC NHANH CHO THẦY CÔ GIÁO
 
-| Công Cụ | Phiên Bản Khuyến Nghị | Mục Đích Sử Dụng | Mức Độ |
-| :--- | :--- | :--- | :--- |
-| **Python** | `3.10` – `3.12` | Chạy máy chủ Web App, xử lý giải nghiệm đại số SymPy, vẽ đồ thị & xuất file Word | **Bắt buộc** |
-| **Google Antigravity** | Antigravity CLI / IDE | Trợ lý Agentic AI tự động biên soạn câu hỏi, thẩm định lời giải, vẽ hình & đảo đề | **Khuyến nghị cao** |
-| **Git** | `2.40+` | Tải mã nguồn dự án, đồng bộ cập nhật từ GitHub repository | **Khuyến nghị** |
-| **Microsoft Word / Office** | `2016` trở lên hoặc 365 | Mở, in ấn và tinh chỉnh trực tiếp đề thi Word chứa công thức Native Equation (OMML) | **Khuyến nghị** |
-| **Trình Duyệt Web** | Chrome, Edge, Brave, Firefox | Truy cập giao diện biên tập tương tác thời gian thực tại `http://localhost:8080` | **Bắt buộc** |
+Nếu Thầy/Cô không rành về kỹ thuật hay dòng lệnh, chỉ cần làm đúng 3 bước đơn giản sau:
 
----
+### 🟢 Bước 1: Tải bộ cài đặt Python về máy tính
+👉 **[Nhấp vào đây để tải trực tiếp Python 3.11 (Bản chuẩn 64-bit cho Windows)](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe)**
 
-## 1. 🐍 Hướng Dẫn Cài Đặt Python (Bắt Buộc)
-
-Python là môi trường nền tảng để chạy giao diện Web tương tác (NiceGUI), thư viện tính toán hình thức (SymPy), vẽ đồ thị (Matplotlib) và chuyển đổi công thức toán sang định dạng Word (python-docx + OMML).
-
-### Bước 1: Tải bộ cài đặt Python
-- Truy cập trang chủ chính thức: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-- Tải bản cài đặt mới nhất cho hệ điều hành của bạn (Khuyến nghị **Python 3.10**, **3.11** hoặc **3.12**; không dùng Python 3.9 trở xuống do chưa hỗ trợ cú pháp kiểu dữ liệu mới).
-
-### Bước 2: Cài đặt trên Windows (Lưu Ý Cực Kỳ Quan Trọng)
-1. Nhấp đúp vào file `.exe` vừa tải về (ví dụ: `python-3.11.x-amd64.exe`).
-2. ⚠️ **BẮT BUỘC TICK VÀO Ô:**
-   > `☑ Add python.exe to PATH` (nằm ở ngay góc dưới màn hình cài đặt đầu tiên).
-   > *(Nếu quên tích ô này, máy tính sẽ báo lỗi `'python' is not recognized as an internal or external command` khi chạy script).*
-3. Nhấp chọn **Install Now** và đợi quá trình cài đặt hoàn tất.
-4. Ở màn hình cuối cùng, nếu thấy nút **Disable path length limit**, hãy nhấn vào đó để tránh lỗi đường dẫn dài trên Windows.
-
-### Bước 3: Kiểm tra cài đặt thành công
-Mở **Command Prompt (CMD)** hoặc **PowerShell** và gõ 2 lệnh sau:
-```bash
-python --version
-# Kết quả hiển thị dạng: Python 3.11.x (hoặc 3.10.x, 3.12.x)
-
-pip --version
-# Kết quả hiển thị dạng: pip 24.x from ...
-```
+*(Nếu máy tính của Thầy/Cô dùng hệ điều hành khác hoặc cần bản 32-bit: xem tại [Trang chủ Python Windows](https://www.python.org/downloads/windows/))*.
 
 ---
 
-## 2. 🤖 Hướng Dẫn Cài Đặt & Cấu Hình Google Antigravity
+### 🟢 Bước 2: Cài đặt Python và TÍCH CHỌN ô "Add to PATH"
+1. Mở file cài đặt vừa tải về (`python-3.11.9-amd64.exe`).
+2. **LƯU Ý CỰC KỲ QUAN TRỌNG:** Ở ngay màn hình đầu tiên xuất hiện, Thầy/Cô hãy nhìn xuống dưới cùng cửa sổ và **bấm chuột tích vào ô vuông**:
+   > `☑ Add python.exe to PATH`
 
-### 2.1. Google Antigravity là gì?
-**Google Antigravity** (AGY) là môi trường Agentic AI Coding tiên tiến được phát triển bởi Google DeepMind. Khác với các mô hình Chat thông thường chỉ trả về văn bản, Antigravity là một **Autonomous Agent** có thể:
-- 📖 Đọc và hiểu toàn bộ cấu trúc dự án, ma trận khảo thí và các file hướng dẫn chuẩn của Bộ GD&ĐT.
-- ⚡ Tự động lập trình và chạy các script Python `verify_math.py` sử dụng thư viện SymPy để giải nghiệm đại số, thẩm định tính đúng/sai của câu hỏi.
-- 📊 Gọi module `math_draw.py` để tự động tính toán tọa độ và vẽ hình đồ thị / hình không gian.
-- 🔄 Tự động chỉnh sửa lại tham số toán học nếu phát hiện nghiệm xấu hoặc trùng đáp án.
-
-### 2.2. Cách cài đặt Antigravity
-Tùy thuộc vào phương thức bạn tiếp cận Antigravity:
-1. **Sử dụng Antigravity CLI (`agy`):**
-   - Đảm bảo máy đã cài đặt Node.js hoặc gói cài đặt Antigravity từ Google.
-   - Kiểm tra lệnh trong Terminal:
-     ```bash
-     agy --version
-     ```
-2. **Sử dụng Antigravity IDE / Extension:**
-   - Mở dự án `MathStudio` trực tiếp trong môi trường Antigravity IDE.
-
-### 2.3. Cấu hình API Key
-- Antigravity kết nối với các mô hình suy luận mạnh mẽ của Google (Gemini 2.5 Pro / Flash).
-- Đảm bảo bạn đã cấu hình API Key:
-  - Trên Windows (PowerShell):
-    ```powershell
-    [System.Environment]::SetEnvironmentVariable('GEMINI_API_KEY', 'your-api-key-here', 'User')
-    ```
-  - Hoặc tạo file `.env` trong thư mục gốc của dự án:
-    ```env
-    GEMINI_API_KEY=your-api-key-here
-    ```
-
-### 2.4. Cách Dự Án Math Studio Tích Hợp Sẵn Với Antigravity
-Dự án đã được cấu hình sẵn cấu trúc Agent tiêu chuẩn trong thư mục `.agent/`:
-- **`📁 .agent/skills/tao-de/SKILL.md`**: Kỹ năng chuyên biệt để tạo đề thi chuẩn THPT 2026 hoặc Đề kiểm tra định kỳ Công văn 7991.
-- **`📁 .agent/rules/math-standard.md`**: Hệ thống luật sư phạm nghiêm ngặt (chuẩn ký hiệu toán học Việt Nam, quy tắc kiểm định nghiệm, bảng điểm lũy tiến Đúng/Sai).
-- **`📁 .agent/workflows/tao-de.md`**: Quy trình tự động 6 bước khép kín từ nhận yêu cầu $\rightarrow$ soạn đề $\rightarrow$ kiểm định SymPy $\rightarrow$ vẽ hình $\rightarrow$ xuất bản.
-
-### 2.5. Cách ra lệnh cho Antigravity tạo đề tự động:
-Khi mở dự án trong Antigravity, bạn chỉ cần gõ yêu cầu vào khung chat, ví dụ:
 ```text
-/tao-de Soạn cho tôi một đề kiểm tra giữa học kỳ 2 Toán 12 theo đúng chuẩn Công văn 7991/BGDĐT-GDTrH, chủ đề Nguyên hàm - Tích phân và Hình học Oxyz.
+┌────────────────────────────────────────────────────────────────────────┐
+│  Python 3.11.9 (64-bit) Setup                                          │
+│                                                                        │
+│   ➡️  Install Now                                                      │
+│       C:\Users\ThayCo\AppData\Local\Programs\Python\Python311          │
+│       (Bấm vào đây SAU KHI đã tích ô ở dưới)                           │
+│                                                                        │
+│   ⚙️  Customize installation                                           │
+│                                                                        │
+│   [ ] Use admin privileges when installing py.exe                      │
+│   [X] Add python.exe to PATH   <=== ⚠️ THẦY CÔ BẮT BUỘC TÍCH Ô NÀY!   │
+└────────────────────────────────────────────────────────────────────────┘
 ```
-Agent Antigravity sẽ:
-1. Nạp tri thức từ Công văn 7991 và Ma trận chuẩn.
-2. Soạn thảo đủ 4 phần (Trắc nghiệm nhiều lựa chọn, Đúng/Sai, Trả lời ngắn, Tự luận).
-3. Tự viết mã giải nghiệm độc lập để đảm bảo 100% đáp án chính xác.
-4. Xuất file kết quả vào thư mục `output/`. Bạn chỉ cần mở Web App lên để xem và tải file Word!
+
+3. Sau khi đã tích ô `☑ Add python.exe to PATH`, Thầy/Cô bấm vào dòng chữ lớn **`Install Now`** ở phía trên.
+4. Đợi khoảng 1 phút cho thanh chạy hoàn tất, bấm **Close** để đóng cửa sổ.
+
+> [!TIP]
+> **Nếu Thầy/Cô lỡ quên không tích ô này thì sao?**
+> Thầy/Cô **hoàn toàn yên tâm**! Bộ cài tự động `install.bat` và `run_app.bat` của Math Studio đã được tích hợp thuật toán thông minh **tự động dò tìm Python** trong mọi thư mục mặc định của Windows. Kể cả khi quên tích ô này, hệ thống vẫn tự nhận diện và khởi động bình thường!
 
 ---
 
-## 3. 📦 Cài Đặt Mã Nguồn & Thư Viện Dự Án
+### 🟢 Bước 3: Khởi động Math Studio (1-Click)
+1. Trong thư mục dự án `MathStudio`, Thầy/Cô **nhấp đúp chuột vào file `install.bat`** (Hệ thống sẽ tự động tải các gói tính toán, vẽ hình, tạo đề trong 1-2 phút).
+2. Sau khi cài xong, Thầy/Cô **nhấp đúp chuột vào file `run_app.bat`**.
+3. Trình duyệt web sẽ tự động mở ra giao diện soạn đề Math Studio tại:
+   👉 **`http://localhost:8080`**
 
-### Bước 1: Tải mã nguồn về máy
-Nếu bạn đã cài Git:
+---
+
+## 📋 Danh Mục Link Tải Các Công Cụ Cần Thiết
+
+Dưới đây là bảng tổng hợp link tải trực tiếp các phần mềm phục vụ toàn bộ chu trình hoạt động của Math Studio:
+
+| Công Cụ | Link Tải Trực Tiếp (1-Click) | Mục Đích Sử Dụng | Mức Độ |
+| :--- | :--- | :--- | :--- |
+| **Python 3.11.9** | 📥 [**Tải Python 3.11 Windows 64-bit (.exe)**](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe) | Máy chủ Web, tính toán SymPy, vẽ đồ thị & xuất Word | **Bắt buộc** |
+| **Google Antigravity** | 🤖 [**Google AI Studio (Lấy Gemini API Key)**](https://aistudio.google.com/) | Autonomous AI Agent tự động soạn đề, thẩm định nghiệm | **Khuyến nghị cao** |
+| **Git for Windows** | 📥 [**Tải Git 64-bit Windows (.exe)**](https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe) | Đồng bộ mã nguồn và cập nhật tính năng từ GitHub | **Khuyến nghị** |
+| **Microsoft Word** | 💼 [**Trang chủ Microsoft Office / 365**](https://www.office.com/) | Mở & in ấn đề thi chứa công thức Native Equation (OMML) | **Khuyến nghị** |
+| **LibreOffice** | 📥 [**Tải LibreOffice Tiếng Việt (Miễn phí 100%)**](https://www.libreoffice.org/download/download/) | Phần mềm mở file Word miễn phí nếu máy chưa có Office | **Thay thế Word** |
+| **Trình duyệt Web** | 🌐 [**Tải Google Chrome**](https://www.google.com/chrome/) \| [**Microsoft Edge**](https://www.microsoft.com/edge) | Xem và tương tác giao diện biên soạn trực quan | **Bắt buộc** |
+
+---
+
+## 🤖 Hướng Dẫn Sử Dụng Trợ Lý AI Google Antigravity
+
+### 1. Google Antigravity là gì?
+**Google Antigravity** (AGY) là môi trường Agentic AI Coding thế hệ mới từ Google DeepMind. Trong Math Studio, Antigravity không chỉ đơn thuần là công cụ chat trả lời văn bản, mà hoạt động như một **Trợ lý Khảo thí Toán học mẫn cán**:
+- Đọc hiểu sâu sắc **Công văn 7991/BGDĐT-GDTrH** và cấu trúc **Tốt nghiệp THPT 2026**.
+- Tự động lập trình và chạy các thuật toán đại số độc lập bằng **SymPy** để giải nghiệm, tính đạo hàm, tích phân, tọa độ vector và thẩm định tính đúng/sai của từng mệnh đề.
+- Tự động vẽ đồ thị hàm số và hình học không gian đạt chuẩn nét vẽ SGK bằng thư viện `math_draw.py`.
+- Tự động sửa số liệu nếu phát hiện nghiệm xấu hoặc trùng phương án.
+
+### 2. Cấu hình Khóa Bí Mật (API Key)
+Để Antigravity kết nối với mô hình AI mạnh nhất của Google (Gemini 2.5 Pro):
+1. Truy cập [Google AI Studio](https://aistudio.google.com/) và đăng nhập tài khoản Google.
+2. Nhấn nút **Create API Key** (hoàn toàn miễn phí).
+3. Đặt biến môi trường trên máy tính hoặc tạo file `.env` trong thư mục dự án với nội dung:
+   ```env
+   GEMINI_API_KEY=ma_khoa_api_cua_ban
+   ```
+
+### 3. Ra lệnh tạo đề tự động với lệnh `/tao-de`
+Khi mở dự án trong Antigravity, Thầy/Cô chỉ cần gõ yêu cầu vào khung chat:
+> `/tao-de Soạn cho tôi 01 đề kiểm tra cuối học kỳ 2 Toán 11 theo đúng chuẩn Công văn 7991, có đầy đủ Ma trận (Phụ lục 1), Bản đặc tả (Phụ lục 2) và lời giải chi tiết.`
+
+Agent sẽ tự động chạy toàn bộ quy trình và xuất kết quả vào thư mục `output/`. Thầy/Cô chỉ cần nhấp chuột xem trước trên Web và tải file Word về in!
+
+---
+
+## 💻 Hướng Dẫn Dành Cho Người Thích Dùng Dòng Lệnh (CLI)
+
+Nếu bạn quen dùng dòng lệnh Terminal/PowerShell:
+
 ```bash
-git clone git@github.com:b0yk0k4n3m/MathStudio.git
+# 1. Tải mã nguồn về máy
+git clone https://github.com/b0yk0k4n3m/MathStudio.git
 cd MathStudio
+
+# 2. Tạo và kích hoạt môi trường ảo Python
+python -m venv venv
+# Trên Windows:
+venv\Scripts\activate
+# Trên Linux/macOS:
+source venv/bin/activate
+
+# 3. Nâng cấp pip và cài đặt toàn bộ thư viện
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# 4. Khởi chạy máy chủ Web
+python app.py
 ```
-*(Hoặc tải file `.zip` từ GitHub rồi giải nén vào thư mục bạn muốn).*
-
-### Bước 2: Cài đặt thư viện phụ thuộc (Dependencies)
-Dự án cung cấp sẵn file cài đặt 1-click cho người dùng Windows:
-- **Cách 1 (Nhanh nhất trên Windows):** Nhấp đúp chuột vào file [`install.bat`](install.bat). File này sẽ tự động tạo môi trường ảo `venv` và cài đặt đầy đủ các gói: `nicegui`, `sympy`, `matplotlib`, `python-docx`, `latex2mathml`, `jinja2`, `uvicorn`...
-- **Cách 2 (Thủ công qua dòng lệnh):**
-  ```bash
-  # 1. Tạo môi trường ảo
-  python -m venv venv
-
-  # 2. Kích hoạt môi trường ảo:
-  # Trên Windows:
-  venv\Scripts\activate
-  # Trên macOS / Linux:
-  source venv/bin/activate
-
-  # 3. Nâng cấp pip và cài đặt thư viện
-  python -m pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
+Mở trình duyệt truy cập: `http://localhost:8080`
 
 ---
 
-## 4. 🚀 Khởi Chạy Ứng Dụng Math Studio
+## ❓ Câu Hỏi & Xử Lý Sự Cố Thường Gặp
 
-Sau khi cài đặt xong, bạn có thể khởi chạy ứng dụng bất cứ lúc nào:
-1. **Trên Windows (1-Click):**
-   - Nhấp đúp vào [`run_app.bat`](run_app.bat).
-   - Cửa sổ dòng lệnh sẽ khởi động máy chủ và tự động mở trình duyệt tại địa chỉ:
-     👉 **`http://localhost:8080`**
-2. **Dừng ứng dụng:**
-   - Khi không sử dụng nữa, bạn nhấp đúp vào [`stop_app.bat`](stop_app.bat) để tắt tiến trình nền và giải phóng cổng mạng `8080`.
+### Q1: Tôi mở `run_app.bat` nhưng cửa sổ hiện lên rồi tắt ngay?
+- **Nguyên nhân:** Máy tính của bạn chưa từng chạy file `install.bat` để tạo môi trường.
+- **Khắc phục:** Hãy nhấp đúp vào file `install.bat`, đợi chạy xong xuất hiện thông báo `[HOAN TAT]` rồi hãy chạy `run_app.bat`.
 
----
+### Q2: Ứng dụng báo lỗi `Port 8080 is already in use`?
+- **Nguyên nhân:** Ứng dụng đang chạy ngầm ở một cửa sổ khác.
+- **Khắc phục:** Nhấp đúp vào file [`stop_app.bat`](stop_app.bat) để tắt sạch các tiến trình cũ, sau đó mở lại `run_app.bat`.
 
-## 5. ❓ Xử Lý Lỗi Thường Gặp (Troubleshooting)
-
-### Lỗi 1: `'python' is not recognized as an internal or external command`
-- **Nguyên nhân:** Khi cài đặt Python, bạn chưa tích chọn `Add python.exe to PATH`.
-- **Cách khắc phục:** 
-  1. Chạy lại bộ cài đặt Python `.exe`.
-  2. Chọn **Modify** hoặc cài đặt lại, nhớ tích chọn `☑ Add python.exe to PATH`.
-  3. Đóng tất cả cửa sổ Terminal / PowerShell hiện tại và mở lại.
-
-### Lỗi 2: Lỗi cổng mạng `Port 8080 is already in use`
-- **Nguyên nhân:** Một phiên bản cũ của ứng dụng hoặc một phần mềm khác đang chiếm cổng `8080`.
-- **Cách khắc phục:**
-  - Nhấp đúp vào [`stop_app.bat`](stop_app.bat) để tắt tiến trình cũ.
-  - Hoặc mở file [`app.py`](app.py), kéo xuống dòng cuối cùng và đổi `port=8080` thành cổng khác (ví dụ: `port=8088`).
-
-### Lỗi 3: Công thức toán trong Word bị hiển thị dạng chữ thô thay vì công thức đẹp
-- **Nguyên nhân:** Mở file `.docx` bằng các phần mềm soạn thảo không hỗ trợ chuẩn Office Math Markup Language (OMML).
-- **Cách khắc phục:**
-  - Hãy mở bằng **Microsoft Word 2016, 2019, 2021 hoặc Microsoft 365**.
-  - Toàn bộ công thức toán trong Math Studio được xuất bản dưới dạng **Native Equation**, cho phép bạn nhấp đúp vào công thức để chỉnh sửa trực tiếp mà không cần cài thêm MathType.
-
-### Lỗi 4: Khi dùng Git báo lỗi `Permission denied (publickey)`
-- **Cách khắc phục:**
-  - Nếu bạn chưa cấu hình SSH Key trên GitHub, hãy dùng đường dẫn HTTPS để clone:
-    ```bash
-    git clone https://github.com/b0yk0k4n3m/MathStudio.git
-    ```
+### Q3: Mở file Word đề thi thấy công thức toán hiển thị bình thường không?
+- **Trả lời:** **Có, cực kỳ chuẩn đẹp!** Toàn bộ đề thi xuất từ Math Studio đều ở chuẩn **Native Word Equation (OMML)** bản địa của Microsoft Word. Thầy/Cô mở bằng Word 2016, 2019, 2021 hoặc Microsoft 365 có thể nhấp đúp trực tiếp vào từng công thức để sửa số mà không cần cài đặt thêm MathType.

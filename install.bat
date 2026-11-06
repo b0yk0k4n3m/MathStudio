@@ -23,22 +23,53 @@ if %errorlevel% equ 0 (
     )
 )
 
+:: Neu chua co trong PATH, tu dong quet cac thu muc cai dat mac dinh cua Windows
 if "%PYTHON_CMD%"=="" (
-    echo [CANH BAO] Khong tim thay Python trong PATH he thong!
-    echo [INFO] Dang thu cai dat Python 3.11 bang cong cu Windows winget...
+    for %%p in (
+        "%LOCALAPPDATA%\Programs\Python\Python312\python.exe"
+        "%LOCALAPPDATA%\Programs\Python\Python311\python.exe"
+        "%LOCALAPPDATA%\Programs\Python\Python310\python.exe"
+        "%ProgramFiles%\Python312\python.exe"
+        "%ProgramFiles%\Python311\python.exe"
+        "%ProgramFiles%\Python310\python.exe"
+        "C:\Python312\python.exe"
+        "C:\Python311\python.exe"
+        "C:\Python310\python.exe"
+    ) do (
+        if exist %%p (
+            if "!PYTHON_CMD!"=="" (
+                set "PYTHON_CMD=%%~p"
+                echo [INFO] Tu dong phat hien Python tai: %%~p
+            )
+        )
+    )
+)
+
+if "%PYTHON_CMD%"=="" (
+    echo [CANH BAO] May tinh chua cai dat Python hoac chua them vao bien moi truong.
+    echo [INFO] Dang thu tai va cai dat tu dong Python 3.11 qua Windows winget...
     winget --version >nul 2>&1
     if %errorlevel% equ 0 (
         winget install Python.Python.3.11 --silent --accept-package-agreements --accept-source-agreements
         echo.
-        echo [THONG BAO] Da cai dat xong Python qua winget.
-        echo [CHU Y] Vui long dong cua so nay va chay lai install.bat de he thong nhan dien PATH moi!
+        echo [THONG BAO] Da cai dat xong Python qua winget!
+        echo [CHU Y] Vui long dong cua so nay va nhap dup lai install.bat de he thong nhan dien moi truong moi!
         pause
         exit /b 0
     ) else (
-        echo [ERROR] May tinh chua co Python va khong co winget!
-        echo Vui long tai va cai dat Python 3.10+ tu trang chu: https://www.python.org/downloads/
-        echo (Nho tich chon: "Add Python to PATH" khi cai dat)
         echo.
+        echo ====================================================================
+        echo [HUONG DAN DANH CHO THAY CO]
+        echo May tinh cua Thay/Co chua cai dat Python.
+        echo He thong dang tu dong mo trinh duyet de tai file cai dat Python 3.11...
+        echo.
+        echo KHI CAI DAT, THAY/CO LUU Y:
+        echo 1. O cua so dau tien, nhin xuong duoi cung, tich vao o:
+        echo    [X] Add python.exe to PATH
+        echo 2. Nhan vao nut 'Install Now' o phia tren va doi 1 phut la xong!
+        echo ====================================================================
+        echo.
+        start https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe
         pause
         exit /b 1
     )

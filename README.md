@@ -76,18 +76,23 @@ Hệ thống giải quyết triệt để các thách thức lớn nhất của 
 
 ---
 
-## 🛠️ Công Cụ Cần Thiết & Cài Đặt (Prerequisites)
+## 🛠️ Công Cụ Cần Thiết & Link Tải Trực Tiếp (Prerequisites)
 
-Trước khi khởi chạy hệ thống, máy tính của bạn cần được trang bị các công cụ nền tảng sau:
+Trước khi khởi chạy hệ thống, máy tính cần được cài đặt các công cụ nền tảng sau (có sẵn link tải trực tiếp 1-click):
 
-| Công Cụ | Yêu Cầu | Vai Trò & Mục Đích |
+| Công Cụ | Link Tải Trực Tiếp (1-Click) | Vai Trò & Mục Đích |
 | :--- | :--- | :--- |
-| **🐍 Python** | `3.10` đến `3.12` | Môi trường bắt buộc chạy Web App (NiceGUI), thẩm định giải nghiệm (SymPy), vẽ hình & xuất Word. *(Lưu ý: Bắt buộc chọn `Add python.exe to PATH` khi cài đặt)*. |
-| **🤖 Google Antigravity** | CLI (`agy`) hoặc IDE | Nền tảng Agentic AI tự động hóa: nhận lệnh `/tao-de`, sinh câu hỏi bám sát chuẩn CV 7991/THPT 2026, viết code kiểm định nghiệm và vẽ đồ thị tự động. |
-| **🐙 Git** | `2.40+` | Quản lý mã nguồn, tải dự án và cập nhật các tính năng mới từ GitHub. |
-| **📝 Microsoft Word** | `2016` trở lên hoặc 365 | Mở, in ấn và tinh chỉnh đề thi chứa công thức chuẩn Native Word Equation (OMML). |
+| **🐍 Python 3.11** | 📥 [**Tải Python 3.11.9 (Windows 64-bit .exe)**](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe) | Chạy Web App (NiceGUI), giải nghiệm SymPy, vẽ hình & xuất Word |
+| **🤖 Google Antigravity** | 🤖 [**Google AI Studio (Lấy Gemini API Key)**](https://aistudio.google.com/) | Autonomous Agentic AI tự động hóa biên soạn, thẩm định nghiệm & đảo đề |
+| **🐙 Git for Windows** | 📥 [**Tải Git 64-bit Windows (.exe)**](https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe) | Tải mã nguồn dự án và cập nhật tính năng mới nhất từ GitHub |
+| **📝 Microsoft Word** | 💼 [**Trang chủ Microsoft Office**](https://www.office.com/) \| [**Tải LibreOffice Miễn Phí**](https://www.libreoffice.org/download/download/) | Mở và in ấn đề thi chứa công thức Native Word Equation (OMML) |
 
-👉 **Xem hướng dẫn chi tiết từng bước cài đặt kèm xử lý lỗi tại:** [**`HUONG_DAN_CAI_DAT.md`**](HUONG_DAN_CAI_DAT.md)
+> [!IMPORTANT]
+> **Dành cho Thầy/Cô giáo khi cài đặt Python:**
+> Khi mở file cài đặt Python, ở màn hình đầu tiên, Thầy/Cô nhìn xuống mép dưới cùng và **tích vào ô vuông: `☑ Add python.exe to PATH`** rồi mới bấm **Install Now**.
+> *(Nếu Thầy/Cô lỡ quên tích ô này, file `install.bat` của Math Studio vẫn có thuật toán tự động dò tìm Python trên máy để chạy bình thường).*
+
+👉 **Xem cẩm nang hướng dẫn cài đặt chi tiết bằng hình ảnh:** [**`HUONG_DAN_CAI_DAT.md`**](HUONG_DAN_CAI_DAT.md)
 
 ---
 
