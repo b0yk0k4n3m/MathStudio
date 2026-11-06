@@ -16,7 +16,9 @@
 </p>
 
 [✨ Tính Năng Nổi Bật](#-tính-năng-nổi-bật) •
+[🛠️ Công Cụ Cần Thiết](#-công-cụ-cần-thiết--cài-đặt-prerequisites) •
 [🚀 Khởi Chạy Nhanh](#-khởi-chạy-nhanh) •
+[🤖 Google Antigravity AI](#-tích-hợp-google-antigravity-ai) •
 [📂 Cấu Trúc Dự Án](#-cấu-trúc-dự-án) •
 [📖 Tài Liệu Chi Tiết](#-tài-liệu-hướng-dẫn-chi-tiết) •
 [👨‍💻 Tác Giả](#-tác-giả--liên-hệ) •
@@ -74,6 +76,21 @@ Hệ thống giải quyết triệt để các thách thức lớn nhất của 
 
 ---
 
+## 🛠️ Công Cụ Cần Thiết & Cài Đặt (Prerequisites)
+
+Trước khi khởi chạy hệ thống, máy tính của bạn cần được trang bị các công cụ nền tảng sau:
+
+| Công Cụ | Yêu Cầu | Vai Trò & Mục Đích |
+| :--- | :--- | :--- |
+| **🐍 Python** | `3.10` đến `3.12` | Môi trường bắt buộc chạy Web App (NiceGUI), thẩm định giải nghiệm (SymPy), vẽ hình & xuất Word. *(Lưu ý: Bắt buộc chọn `Add python.exe to PATH` khi cài đặt)*. |
+| **🤖 Google Antigravity** | CLI (`agy`) hoặc IDE | Nền tảng Agentic AI tự động hóa: nhận lệnh `/tao-de`, sinh câu hỏi bám sát chuẩn CV 7991/THPT 2026, viết code kiểm định nghiệm và vẽ đồ thị tự động. |
+| **🐙 Git** | `2.40+` | Quản lý mã nguồn, tải dự án và cập nhật các tính năng mới từ GitHub. |
+| **📝 Microsoft Word** | `2016` trở lên hoặc 365 | Mở, in ấn và tinh chỉnh đề thi chứa công thức chuẩn Native Word Equation (OMML). |
+
+👉 **Xem hướng dẫn chi tiết từng bước cài đặt kèm xử lý lỗi tại:** [**`HUONG_DAN_CAI_DAT.md`**](HUONG_DAN_CAI_DAT.md)
+
+---
+
 ## 🚀 Khởi Chạy Nhanh
 
 ### Cách 1: Khởi Động 1-Click trên Windows (Khuyến nghị)
@@ -102,11 +119,26 @@ Mở trình duyệt web và truy cập địa chỉ: **`http://localhost:8080`**
 
 ---
 
+## 🤖 Tích Hợp Google Antigravity AI
+
+Math Studio được thiết kế kiến trúc chuẩn **Agentic Workflow** để tương thích hoàn hảo với **Google Antigravity**:
+
+1. **Kỹ năng chuyên biệt ([`.agent/skills/tao-de`](.agent/skills/tao-de/SKILL.md)):**
+   - Khi chạy lệnh `/tao-de` hoặc ra lệnh bằng ngôn ngữ tự nhiên trong Antigravity, Agent sẽ tự động nạp tri thức chuẩn từ Công văn 7991/BGDĐT-GDTrH hoặc cấu trúc Tốt nghiệp THPT 2026.
+2. **Quy trình thẩm định nghiệm tự động ([`.agent/workflows/tao-de.md`](.agent/workflows/tao-de.md)):**
+   - Agent tự động viết mã Python SymPy độc lập, giải toán từng bước để đối chiếu đáp án trước khi lưu vào đề thi.
+   - Nếu phát hiện nghiệm phân số xấu hoặc nhầm lẫn logic, Agent tự động thay đổi tham số toán học và kiểm định lại cho đến khi đạt độ hoàn hảo sư phạm.
+3. **Quy chuẩn Toán học Việt Nam ([`.agent/rules/math-standard.md`](.agent/rules/math-standard.md)):**
+   - Áp dụng các luật định dạng nghiêm ngặt: ký hiệu véctơ, tích phân, khoảng/nửa khoảng, vẽ hình tuân thủ nét thấy/nét đứt theo SGK mới.
+
+---
+
 ## 📂 Cấu Trúc Dự Án
 
 ```text
 de-toan-ai/
 ├── app.py                  # Giao diện Web Application (NiceGUI)
+├── exam_shuffler.py        # Engine xáo trộn, đảo nhiều mã đề & lập ma trận đáp án
 ├── export_docx.py          # Module xuất đề thi Word (.docx) chuẩn Native Equation (OMML)
 ├── math_draw.py            # Thư viện tự động vẽ đồ thị hàm số & hình không gian
 ├── verify_math.py          # Mã nguồn kiểm định toán học toàn bộ đề
@@ -119,8 +151,13 @@ de-toan-ai/
 ├── Dockerfile              # Cấu hình container hóa Docker
 ├── docker-compose.yml      # Cấu hình triển khai dịch vụ Docker Compose
 ├── LICENSE                 # Giấy phép bản quyền mã nguồn mở (MIT)
+├── HUONG_DAN_CAI_DAT.md    # Hướng dẫn chi tiết cài đặt Python, Antigravity, Git & Troubleshooting
 ├── GUIDELINES.md           # Hướng dẫn sử dụng & quy chuẩn đề thi chi tiết
 ├── DEPLOYMENT.md           # Hướng dẫn triển khai Production (VPS, LAN, Docker, Cloud)
+├── .agent/                 # Cấu hình Autonomous Agent của Google Antigravity
+│   ├── rules/              # Quy chuẩn toán học & sư phạm nghiêm ngặt
+│   ├── skills/             # Kỹ năng tự động tạo & thẩm định đề (/tao-de)
+│   └── workflows/          # Quy trình tạo đề tự động 6 bước
 ├── input/                  # Chứa file đề mẫu, ảnh đề bài đầu vào
 │   └── blueprint_images/   # Ảnh ma trận đề hoặc đề gốc tải lên
 └── output/                 # Lưu trữ thành phẩm đề thi
@@ -137,6 +174,7 @@ de-toan-ai/
 
 Hệ thống có đầy đủ tài liệu hướng dẫn kỹ thuật chuyên sâu được phân tách rõ ràng:
 
+- 🛠️ [**HUONG_DAN_CAI_DAT.md**](HUONG_DAN_CAI_DAT.md): Hướng dẫn chi tiết cài đặt các công cụ nền tảng (Python, Google Antigravity, Git, Office Word) và cách xử lý các sự cố môi trường thường gặp.
 - 📋 [**GUIDELINES.md**](GUIDELINES.md): Hướng dẫn sử dụng chi tiết từng chức năng trên giao diện Web, quy cách cấu trúc đề 2026, quy chuẩn công thức LaTeX và quy tắc kiểm định toán học.
 - 🚀 [**DEPLOYMENT.md**](DEPLOYMENT.md): Hướng dẫn triển khai hệ thống toàn diện: Mạng nội bộ trường học (LAN), Docker / Docker Compose, Linux VPS (Nginx + Systemd + SSL), Windows Server (Windows Service NSSM) và Cloud PaaS (Render, Railway, Fly.io).
 
