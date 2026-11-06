@@ -126,7 +126,7 @@ Mở trình duyệt web và truy cập địa chỉ: **`http://localhost:8080`**
 
 ## 🤖 Tích Hợp Google Antigravity AI
 
-Math Studio được thiết kế kiến trúc chuẩn **Agentic Workflow** để tương thích hoàn hảo với **Google Antigravity**:
+Math Studio được thiết kế kiến trúc chuẩn **Agentic Workflow** để tương thích hoàn hảo với **Google Antigravity**. *(Khi thao tác trên giao diện Web, hệ thống tự động kích hoạt Agent chạy ngầm, Thầy/Cô chỉ cần thao tác bằng chuột mà không cần gõ bất kỳ dòng lệnh nào)*:
 
 1. **Kỹ năng chuyên biệt ([`.agent/skills/tao-de`](.agent/skills/tao-de/SKILL.md)):**
    - Khi chạy lệnh `/tao-de` hoặc ra lệnh bằng ngôn ngữ tự nhiên trong Antigravity, Agent sẽ tự động nạp tri thức chuẩn từ Công văn 7991/BGDĐT-GDTrH hoặc cấu trúc Tốt nghiệp THPT 2026.

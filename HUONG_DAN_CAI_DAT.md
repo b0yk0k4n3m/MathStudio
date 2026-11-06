@@ -80,16 +80,20 @@ Dưới đây là bảng tổng hợp link tải trực tiếp các phần mềm
 - Truy cập trang chủ chính thức: 👉 **[antigravity.google](https://antigravity.google)** để tải và cài đặt **Antigravity CLI** hoặc **Antigravity IDE**.
 - **Xác thực tài khoản (Authentication):** Khi khởi chạy lần đầu tiên, Antigravity sẽ tự động mở trình duyệt để bạn đăng nhập trực tiếp bằng tài khoản Google của mình. **Bạn hoàn toàn không cần phải đi lấy API Key thủ công hay cấu hình phức tạp.**
 
-### 3. Ra lệnh tạo đề tự động với Slash Command `/tao-de`
-1. Mở Terminal / PowerShell tại thư mục dự án `MathStudio`, gõ lệnh:
-   ```bash
-   agy
-   ```
-   *(Hoặc mở thư mục dự án trực tiếp bằng Antigravity IDE).*
-2. Trong khung chat của Antigravity, Thầy/Cô chỉ cần gõ yêu cầu kèm lệnh `/tao-de`:
-   > `/tao-de Soạn cho tôi 01 đề kiểm tra cuối học kỳ 2 Toán 11 theo đúng chuẩn Công văn 7991, có đầy đủ Ma trận (Phụ lục 1), Bản đặc tả (Phụ lục 2) và lời giải chi tiết.`
+### 3. Cách Sử Dụng Cùng Math Studio
 
-Agent sẽ tự động kích hoạt workflow 6 bước, viết code kiểm định nghiệm SymPy, vẽ đồ thị hàm số và xuất kết quả ra file Word/Markdown trong thư mục `output/`. Thầy/Cô chỉ cần mở giao diện Web App lên để xem và tải về!
+#### 🌟 Cách 1: Thao tác 100% trên Giao diện Web (Khuyến nghị cho Thầy/Cô - Không cần gõ lệnh)
+- Thầy/Cô chỉ cần mở giao diện Web tại **`http://localhost:8080`**.
+- Chọn mẫu ma trận đề thi (hoặc tải ảnh ma trận lên), sau đó bấm nút **🚀 Khởi chạy Biên soạn Đề**.
+- **Math Studio sẽ tự động gọi Antigravity chạy ngầm bên dưới**: tự động sinh câu hỏi, chạy SymPy kiểm định nghiệm, vẽ hình và hiển thị trực quan lên màn hình Web.
+- Thầy/Cô **hoàn toàn không cần gõ lệnh gì cả**, mọi thao tác từ xem đề, sửa câu hỏi, đảo nhiều mã đề và xuất Word đều diễn ra bằng chuột trên giao diện Web!
+
+#### ⚙️ Cách 2: Sử dụng qua Dòng Lệnh hoặc Antigravity IDE (Dành cho Lập trình viên / Chế độ nâng cao)
+Nếu muốn điều khiển trực tiếp bằng prompt trong Terminal:
+1. Mở Terminal / PowerShell tại thư mục `MathStudio`, gõ lệnh `agy` (hoặc mở bằng Antigravity IDE).
+2. Gõ yêu cầu tạo đề:
+   > `/tao-de Soạn cho tôi 01 đề kiểm tra cuối học kỳ 2 Toán 11 theo đúng chuẩn Công văn 7991`
+3. Agent sẽ tự động chạy workflow 6 bước và lưu file vào thư mục `output/`.
 
 ---
 
