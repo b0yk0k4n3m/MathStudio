@@ -99,9 +99,10 @@ Trước khi khởi chạy hệ thống, máy tính cần được cài đặt c
 ## 🚀 Khởi Chạy Nhanh
 
 ### Cách 1: Khởi Động 1-Click trên Windows (Khuyến nghị)
-1. **Cài đặt tự động:** Nhấp đúp vào file [`install.bat`](install.bat) (tự động tạo môi trường ảo `venv` và cài đặt gói phụ thuộc).
-2. **Khởi chạy ứng dụng:** Nhấp đúp vào file [`run_app.bat`](run_app.bat) để mở giao diện tại `http://localhost:8080`.
-3. **Dừng máy chủ:** Nhấp đúp vào file [`stop_app.bat`](stop_app.bat) khi muốn tắt ứng dụng và giải phóng cổng kết nối.
+1. **Cài đặt tự động:** Nhấp đúp vào file [`install.bat`](install.bat) (tự động tạo môi trường ảo `venv`, cài đặt các gói phụ thuộc và **tự động tạo biểu tượng 'Math Studio' trên Desktop**).
+2. **Khởi chạy ứng dụng:** Nhấp đúp vào biểu tượng **Math Studio** trên Desktop (hoặc nhấp đúp file [`run_app.bat`](run_app.bat)) để mở ngay phần mềm tại `http://localhost:8080`.
+3. **Tạo lại biểu tượng Desktop:** Nếu lỡ tay xóa icon, chỉ cần nhấp đúp file [`tao_icon_desktop.bat`](tao_icon_desktop.bat).
+4. **Dừng máy chủ:** Nhấp đúp vào file [`stop_app.bat`](stop_app.bat) khi muốn tắt ứng dụng và giải phóng cổng kết nối.
 
 ### Cách 2: Cài Đặt Thủ Công qua Dòng Lệnh
 ```bash
@@ -150,6 +151,10 @@ de-toan-ai/
 ├── verify_single.py        # Mã nguồn kiểm định toán học từng câu đơn lẻ
 ├── CURRENT_TASK.md         # File cấu hình yêu cầu đề thi đang soạn thảo
 ├── requirements.txt        # Danh mục thư viện Python phụ thuộc
+├── math_studio.ico         # Biểu tượng phần mềm độ phân giải cao (đa kích cỡ)
+├── tao_icon_desktop.bat    # Script 1-click tạo biểu tượng Math Studio trên màn hình Desktop
+├── create_desktop_shortcut.py # Mã nguồn Python tạo shortcut & cấu hình icon
+├── run_desktop.vbs         # Trình khởi động ứng dụng chạy ngầm không lộ cửa sổ CMD
 ├── install.bat             # Cài đặt tự động môi trường 1-click (Windows)
 ├── run_app.bat             # Khởi chạy ứng dụng 1-click (Windows)
 ├── stop_app.bat            # Tắt ứng dụng & giải phóng cổng kết nối (Windows)

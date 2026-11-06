@@ -44,11 +44,12 @@ Nếu Thầy/Cô không rành về kỹ thuật hay dòng lệnh, chỉ cần l�
 
 ---
 
-### 🟢 Bước 3: Khởi động Math Studio (1-Click)
-1. Trong thư mục dự án `MathStudio`, Thầy/Cô **nhấp đúp chuột vào file `install.bat`** (Hệ thống sẽ tự động tải các gói tính toán, vẽ hình, tạo đề trong 1-2 phút).
-2. Sau khi cài xong, Thầy/Cô **nhấp đúp chuột vào file `run_app.bat`**.
+### 🟢 Bước 3: Cài đặt và Mở bằng Icon trên Desktop
+1. Trong thư mục dự án `MathStudio`, Thầy/Cô **nhấp đúp chuột vào file `install.bat`** (Hệ thống sẽ tự động cài đặt các thư viện toán học và **tự động tạo biểu tượng 'Math Studio' ra màn hình Desktop**).
+2. Sau khi cài xong, Thầy/Cô chỉ cần **ra màn hình Desktop và nhấp đúp vào biểu tượng Math Studio** (hoặc nhấp đúp file [`run_app.bat`](run_app.bat)).
 3. Trình duyệt web sẽ tự động mở ra giao diện soạn đề Math Studio tại:
    👉 **`http://localhost:8080`**
+*(Nếu lỡ tay xóa mất icon trên Desktop, Thầy/Cô chỉ cần nhấp đúp vào file `tao_icon_desktop.bat` là icon sẽ xuất hiện lại ngay lập tức).*
 
 ---
 

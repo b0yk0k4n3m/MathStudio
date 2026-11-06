@@ -63,9 +63,6 @@ if %errorlevel% equ 0 (
     echo [THONG BAO] Ung dung dang chay san tai http://localhost:8080 !
     echo [INFO] Dang mo trinh duyet...
     start http://localhost:8080
-    echo [TIP] Neu muon khoi dong lai toan bo, hay chay stop_app.bat truoc.
-    echo.
-    pause
     exit /b 0
 )
 

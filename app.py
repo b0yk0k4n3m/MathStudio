@@ -4096,4 +4096,5 @@ if __name__ in {"__main__", "__mp_main__"}:
         port=server_port,
         reload=False,
         show=show_browser,
+        favicon="math_studio.ico",
     )

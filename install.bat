@@ -151,14 +151,18 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
+:: Tu dong tao Shortcut bieu tuong tren Desktop cho nguoi dung
+echo [INFO] Dang tao bieu tuong (Shortcut) Math Studio ra man hinh Desktop...
+"%VENV_PY%" create_desktop_shortcut.py >nul 2>&1
+echo [OK] Da tao thanh cong bieu tuong 'Math Studio' tren man hinh Desktop!
+
 echo.
 echo ====================================================================
 echo   CHUC MUNG! CAI DAT HOAN TAT 100%% VA HOAN TOAN KHONG CO LOI!
 echo ====================================================================
 echo.
-echo Ban co the bat dau su dung he thong ngay:
-echo  1. Dung Antigravity CLI: go 'agy' roi nhap '/tao-de' de tao de tu dong.
-echo  2. Dung Giao dien Web:   nhap dup file 'run_app.bat' (http://localhost:8080).
+echo  -> Bieu tuong 'Math Studio' da duoc tao tren Desktop cua Thay/Co!
+echo  -> Thay/Co chi can ra man hinh Desktop va nhap dup vao de mo ung dung.
 echo.
 
 set /p START_NOW="Ban co muon khoi dong ung dung Web ngay bay gio khong? (Y/N, Mac dinh Y): "
