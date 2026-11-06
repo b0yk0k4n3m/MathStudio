@@ -83,7 +83,7 @@ Trước khi khởi chạy hệ thống, máy tính cần được cài đặt c
 | Công Cụ | Link Tải Trực Tiếp (1-Click) | Vai Trò & Mục Đích |
 | :--- | :--- | :--- |
 | **🐍 Python 3.11** | 📥 [**Tải Python 3.11.9 (Windows 64-bit .exe)**](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe) | Chạy Web App (NiceGUI), giải nghiệm SymPy, vẽ hình & xuất Word |
-| **🤖 Google Antigravity** | 🤖 [**Google AI Studio (Lấy Gemini API Key)**](https://aistudio.google.com/) | Autonomous Agentic AI tự động hóa biên soạn, thẩm định nghiệm & đảo đề |
+| **🤖 Google Antigravity** | 🤖 [**Trang chủ Google Antigravity (CLI / IDE)**](https://antigravity.google) | Autonomous Agentic AI tự động hóa biên soạn, thẩm định nghiệm & đảo đề (Đăng nhập Google trực tiếp, không cần API Key) |
 | **🐙 Git for Windows** | 📥 [**Tải Git 64-bit Windows (.exe)**](https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe) | Tải mã nguồn dự án và cập nhật tính năng mới nhất từ GitHub |
 | **📝 Microsoft Word** | 💼 [**Trang chủ Microsoft Office**](https://www.office.com/) \| [**Tải LibreOffice Miễn Phí**](https://www.libreoffice.org/download/download/) | Mở và in ấn đề thi chứa công thức Native Word Equation (OMML) |
 

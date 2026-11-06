@@ -59,7 +59,7 @@ Dưới đây là bảng tổng hợp link tải trực tiếp các phần mềm
 | Công Cụ | Link Tải Trực Tiếp (1-Click) | Mục Đích Sử Dụng | Mức Độ |
 | :--- | :--- | :--- | :--- |
 | **Python 3.11.9** | 📥 [**Tải Python 3.11 Windows 64-bit (.exe)**](https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe) | Máy chủ Web, tính toán SymPy, vẽ đồ thị & xuất Word | **Bắt buộc** |
-| **Google Antigravity** | 🤖 [**Google AI Studio (Lấy Gemini API Key)**](https://aistudio.google.com/) | Autonomous AI Agent tự động soạn đề, thẩm định nghiệm | **Khuyến nghị cao** |
+| **Google Antigravity** | 🤖 [**Trang chủ Google Antigravity (CLI / IDE)**](https://antigravity.google) | Autonomous AI Agent tự động soạn đề, thẩm định nghiệm | **Khuyến nghị cao** |
 | **Git for Windows** | 📥 [**Tải Git 64-bit Windows (.exe)**](https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/Git-2.47.1-64-bit.exe) | Đồng bộ mã nguồn và cập nhật tính năng từ GitHub | **Khuyến nghị** |
 | **Microsoft Word** | 💼 [**Trang chủ Microsoft Office / 365**](https://www.office.com/) | Mở & in ấn đề thi chứa công thức Native Equation (OMML) | **Khuyến nghị** |
 | **LibreOffice** | 📥 [**Tải LibreOffice Tiếng Việt (Miễn phí 100%)**](https://www.libreoffice.org/download/download/) | Phần mềm mở file Word miễn phí nếu máy chưa có Office | **Thay thế Word** |
@@ -67,29 +67,29 @@ Dưới đây là bảng tổng hợp link tải trực tiếp các phần mềm
 
 ---
 
-## 🤖 Hướng Dẫn Sử Dụng Trợ Lý AI Google Antigravity
+## 🤖 Hướng Dẫn Cài Đặt & Sử Dụng Google Antigravity (CLI / IDE)
 
 ### 1. Google Antigravity là gì?
-**Google Antigravity** (AGY) là môi trường Agentic AI Coding thế hệ mới từ Google DeepMind. Trong Math Studio, Antigravity không chỉ đơn thuần là công cụ chat trả lời văn bản, mà hoạt động như một **Trợ lý Khảo thí Toán học mẫn cán**:
+**Google Antigravity** (AGY) là môi trường Agentic AI Coding thế hệ mới từ Google DeepMind được cài đặt và vận hành trực tiếp trên máy tính của bạn (dưới dạng **Antigravity CLI** `agy` hoặc **Antigravity IDE**). Trong Math Studio, Antigravity đóng vai trò như một **Trợ lý Khảo thí Toán học chuyên nghiệp**:
 - Đọc hiểu sâu sắc **Công văn 7991/BGDĐT-GDTrH** và cấu trúc **Tốt nghiệp THPT 2026**.
 - Tự động lập trình và chạy các thuật toán đại số độc lập bằng **SymPy** để giải nghiệm, tính đạo hàm, tích phân, tọa độ vector và thẩm định tính đúng/sai của từng mệnh đề.
 - Tự động vẽ đồ thị hàm số và hình học không gian đạt chuẩn nét vẽ SGK bằng thư viện `math_draw.py`.
 - Tự động sửa số liệu nếu phát hiện nghiệm xấu hoặc trùng phương án.
 
-### 2. Cấu hình Khóa Bí Mật (API Key)
-Để Antigravity kết nối với mô hình AI mạnh nhất của Google (Gemini 2.5 Pro):
-1. Truy cập [Google AI Studio](https://aistudio.google.com/) và đăng nhập tài khoản Google.
-2. Nhấn nút **Create API Key** (hoàn toàn miễn phí).
-3. Đặt biến môi trường trên máy tính hoặc tạo file `.env` trong thư mục dự án với nội dung:
-   ```env
-   GEMINI_API_KEY=ma_khoa_api_cua_ban
+### 2. Cài đặt & Đăng nhập Antigravity (Không cần tạo API Key thủ công)
+- Truy cập trang chủ chính thức: 👉 **[antigravity.google](https://antigravity.google)** để tải và cài đặt **Antigravity CLI** hoặc **Antigravity IDE**.
+- **Xác thực tài khoản (Authentication):** Khi khởi chạy lần đầu tiên, Antigravity sẽ tự động mở trình duyệt để bạn đăng nhập trực tiếp bằng tài khoản Google của mình. **Bạn hoàn toàn không cần phải đi lấy API Key thủ công hay cấu hình phức tạp.**
+
+### 3. Ra lệnh tạo đề tự động với Slash Command `/tao-de`
+1. Mở Terminal / PowerShell tại thư mục dự án `MathStudio`, gõ lệnh:
+   ```bash
+   agy
    ```
+   *(Hoặc mở thư mục dự án trực tiếp bằng Antigravity IDE).*
+2. Trong khung chat của Antigravity, Thầy/Cô chỉ cần gõ yêu cầu kèm lệnh `/tao-de`:
+   > `/tao-de Soạn cho tôi 01 đề kiểm tra cuối học kỳ 2 Toán 11 theo đúng chuẩn Công văn 7991, có đầy đủ Ma trận (Phụ lục 1), Bản đặc tả (Phụ lục 2) và lời giải chi tiết.`
 
-### 3. Ra lệnh tạo đề tự động với lệnh `/tao-de`
-Khi mở dự án trong Antigravity, Thầy/Cô chỉ cần gõ yêu cầu vào khung chat:
-> `/tao-de Soạn cho tôi 01 đề kiểm tra cuối học kỳ 2 Toán 11 theo đúng chuẩn Công văn 7991, có đầy đủ Ma trận (Phụ lục 1), Bản đặc tả (Phụ lục 2) và lời giải chi tiết.`
-
-Agent sẽ tự động chạy toàn bộ quy trình và xuất kết quả vào thư mục `output/`. Thầy/Cô chỉ cần nhấp chuột xem trước trên Web và tải file Word về in!
+Agent sẽ tự động kích hoạt workflow 6 bước, viết code kiểm định nghiệm SymPy, vẽ đồ thị hàm số và xuất kết quả ra file Word/Markdown trong thư mục `output/`. Thầy/Cô chỉ cần mở giao diện Web App lên để xem và tải về!
 
 ---
 
