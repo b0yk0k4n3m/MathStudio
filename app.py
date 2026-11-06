@@ -2445,7 +2445,7 @@ def main_page():
                         p_th = f"{(s_th/s_tot*100):.0f}%" if s_tot > 0 else "0%"
                         p_vd = f"{(s_vd/s_tot*100):.0f}%" if s_tot > 0 else "0%"
                         p_vdc = f"{(s_vdc/s_tot*100):.0f}%" if s_tot > 0 else "0%"
-                        s_pts = s_tot * 0.25 if "Một lựa chọn" in s_obj.get("type", "") else (s_tot * 1.0 if "Đúng" in s_obj.get("type", "") else s_tot * 0.5)
+                        s_pts = s_tot * 0.25 if "Một lựa chọn" in s_obj.get("type", "") else (s_tot * 1.0 if "Đúng" in s_obj.get("type", "") else (s_tot * 1.5 if "Tự luận" in s_obj.get("type", "") else s_tot * 0.5))
 
                         if s_i in sec_summary_widgets:
                             sw = sec_summary_widgets[s_i]
@@ -2496,9 +2496,13 @@ def main_page():
                                     with ui.row().classes("items-center gap-2 flex-1"):
                                         ui.label(f"{sec.get('title', f'Phần {s_idx+1}')}").classes("text-base font-bold text-slate-900 shrink-0")
                                         ui.input(placeholder="Mô tả phần").bind_value(sec, "subtitle").props("rounded outlined dense").classes("w-44 text-sm bg-white")
+                                        sec_type_options = ["Một lựa chọn đúng", "Đúng / Sai", "Trả lời ngắn", "Tự luận"]
+                                        curr_sec_type = sec.get("type", "Một lựa chọn đúng")
+                                        if curr_sec_type not in sec_type_options:
+                                            sec_type_options.append(curr_sec_type)
                                         sec_type_sel = ui.select(
-                                            ["Một lựa chọn đúng", "Đúng / Sai", "Trả lời ngắn"],
-                                            value=sec.get("type", "Một lựa chọn đúng"),
+                                            sec_type_options,
+                                            value=curr_sec_type,
                                         ).bind_value(sec, "type").props("rounded outlined dense").classes("w-48 text-sm bg-white")
                                         sec_type_sel.on("update:model-value", lambda _: update_step2_stats())
 
@@ -2601,7 +2605,7 @@ def main_page():
                                     p_th = f"{(s_th/s_tot*100):.0f}%" if s_tot > 0 else "0%"
                                     p_vd = f"{(s_vd/s_tot*100):.0f}%" if s_tot > 0 else "0%"
                                     p_vdc = f"{(s_vdc/s_tot*100):.0f}%" if s_tot > 0 else "0%"
-                                    s_pts = s_tot * 0.25 if "Một lựa chọn" in sec.get("type", "") else (s_tot * 1.0 if "Đúng" in sec.get("type", "") else s_tot * 0.5)
+                                    s_pts = s_tot * 0.25 if "Một lựa chọn" in sec.get("type", "") else (s_tot * 1.0 if "Đúng" in sec.get("type", "") else (s_tot * 1.5 if "Tự luận" in sec.get("type", "") else s_tot * 0.5))
 
                                     with ui.row().classes("w-full items-center px-2 py-2 border-t border-dashed border-slate-300 mt-2 text-slate-800 gap-2"):
                                         pts_t_lbl = ui.label(f"Tổng kết {sec.get('title', 'Phần')} ({s_pts:.2f} điểm)").classes("flex-1 font-bold text-xs text-blue-900")
@@ -2836,6 +2840,7 @@ def main_page():
         state["mcq"] = stats["p1_q"]
         state["tf"] = stats["p2_q"]
         state["sa"] = stats["p3_q"]
+        state["essay"] = stats.get("p4_q", 0)
         update_matrix_ui()
 
     def open_matrix_modal():
@@ -2858,6 +2863,7 @@ def main_page():
         n_mcq = int(state.get("mcq") or 0)
         n_tf = int(state.get("tf") or 0)
         n_sa = int(state.get("sa") or 0)
+        n_essay = int(state.get("essay") or 0)
         old_map = {
             (it["part"], it["label"]): it for it in state.get("blueprint_items", [])
         }
@@ -2886,6 +2892,14 @@ def main_page():
                 old_map.get(
                     key,
                     {"part": key[0], "label": key[1], "level": default_lvl, "idea": "", "image": None},
+                )
+            )
+        for i in range(1, n_essay + 1):
+            key = ("PHẦN IV (Tự luận)", f"Bài {i}")
+            new_items.append(
+                old_map.get(
+                    key,
+                    {"part": key[0], "label": key[1], "level": "Vận dụng", "idea": "", "image": None},
                 )
             )
         state["blueprint_items"] = new_items
@@ -3783,6 +3797,7 @@ def main_page():
                         ("p1", "Phần I: 4 Lựa chọn"),
                         ("p2", "Phần II: Đúng/Sai"),
                         ("p3", "Phần III: Trả lời ngắn"),
+                        ("p4", "Phần IV: Tự luận"),
                     ]
                     for f_key, f_lbl in filters:
                         is_act = state.get("filter_part", "all") == f_key
@@ -3805,12 +3820,14 @@ def main_page():
             for idx, q in enumerate(questions):
                 sec_name = q.get("section", "")
                 
-                # Áp dụng bộ lọc Phần I, II, III
+                # Áp dụng bộ lọc Phần I, II, III, IV
                 if curr_filter == "p1" and "PHẦN I" not in sec_name.upper():
                     continue
                 if curr_filter == "p2" and "PHẦN II" not in sec_name.upper():
                     continue
                 if curr_filter == "p3" and "PHẦN III" not in sec_name.upper():
+                    continue
+                if curr_filter == "p4" and "PHẦN IV" not in sec_name.upper() and "TỰ LUẬN" not in sec_name.upper():
                     continue
 
                 if sec_name and sec_name != current_sec_banner:
@@ -3827,7 +3844,15 @@ def main_page():
                 card_accent = (
                     "border-l-4 border-l-blue-600"
                     if "PHẦN I" in sec_name.upper()
-                    else ("border-l-4 border-l-emerald-600" if "PHẦN II" in sec_name.upper() else "border-l-4 border-l-amber-500")
+                    else (
+                        "border-l-4 border-l-emerald-600"
+                        if "PHẦN II" in sec_name.upper()
+                        else (
+                            "border-l-4 border-l-amber-500"
+                            if "PHẦN III" in sec_name.upper()
+                            else "border-l-4 border-l-purple-600"
+                        )
+                    )
                 )
 
                 with ui.card().classes(

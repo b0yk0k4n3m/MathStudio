@@ -15,6 +15,7 @@
   <b>Giải pháp tự động hóa toàn diện quy trình thiết kế ma trận, biên soạn câu hỏi, kiểm định nghiệm chính xác tuyệt đối và xuất bản đề thi Microsoft Word (.docx) bản địa theo chuẩn Tốt nghiệp THPT 2026 & Công văn 7991/BGDĐT-GDTrH.</b>
 </p>
 
+[📸 Hình Ảnh Giao Diện](#-giao-diện-thực-tế-dành-cho-thầy-cô-giáo) •
 [✨ Tính Năng Nổi Bật](#-tính-năng-nổi-bật) •
 [🛠️ Công Cụ Cần Thiết](#-công-cụ-cần-thiết--cài-đặt-prerequisites) •
 [🚀 Khởi Chạy Nhanh](#-khởi-chạy-nhanh) •
@@ -39,6 +40,26 @@ Hệ thống giải quyết triệt để các thách thức lớn nhất của 
 - 🎯 **Triệt tiêu lỗi sai đề:** Giải nghiệm hình thức tự động, chống nhầm lẫn, trùng đáp án hoặc số liệu vô lý.
 - 📐 **Chuẩn mực vẽ hình sư phạm:** Tự động vẽ đồ thị hàm số và hình học không gian chuẩn nét SGK.
 - 📝 **Công thức Word chuẩn bản địa:** Xuất file `.docx` chứa công thức toán dạng Equation gốc (OMML), có thể nhấp đúp chỉnh sửa trực tiếp không qua ảnh chụp.
+
+---
+
+## 📸 Giao Diện Thực Tế Dành Cho Thầy/Cô Giáo
+
+Dưới đây là hình ảnh thực tế của hệ thống **Math Studio** khi biên soạn và thẩm định đề thi theo chuẩn Bộ Giáo dục & Đào tạo:
+
+### 1. 📋 Bảng Thiết Lập Ma Trận & Khung Đề Thi Chuẩn CV 7991 / THPT 2026
+*Hệ thống trực quan hóa toàn bộ Ma trận đề thi, cấu trúc điểm số (70% Trắc nghiệm + 30% Tự luận), mức độ nhận thức (Nhận biết – Thông hiểu – Vận dụng), tích hợp 1-click xuất file Word (.docx) và đảo nhiều mã đề:*
+
+<p align="center">
+  <img src="docs/images/math_studio_matrix_overview.png" alt="Giao diện Thiết lập Ma trận & Đề thi Math Studio (Chuẩn CV 7991 & THPT 2026)" width="95%" />
+</p>
+
+### 2. 🔍 Thẻ Câu Hỏi Trực Quan, Công Thức Chuẩn & Lời Giải Đã Thẩm Định SymPy
+*Mỗi câu hỏi được hiển thị dưới dạng thẻ độc lập với công thức Toán học chuẩn mực KaTeX, khung Lời giải chi tiết kèm thẩm định nghiệm tự động bằng Python SymPy và các công cụ tiện ích 1-click (Đổi số mới, AI sửa câu này, Sửa tay LaTeX, Tinh chỉnh mức độ):*
+
+<p align="center">
+  <img src="docs/images/math_studio_question_detail.png" alt="Thẻ Câu hỏi, Công thức Toán học và Lời giải Chi tiết đã kiểm định" width="95%" />
+</p>
 
 ---
 
@@ -164,6 +185,8 @@ de-toan-ai/
 ├── HUONG_DAN_CAI_DAT.md    # Hướng dẫn chi tiết cài đặt Python, Antigravity, Git & Troubleshooting
 ├── GUIDELINES.md           # Hướng dẫn sử dụng & quy chuẩn đề thi chi tiết
 ├── DEPLOYMENT.md           # Hướng dẫn triển khai Production (VPS, LAN, Docker, Cloud)
+├── docs/                   # Tài liệu & hình ảnh giao diện minh họa thực tế
+│   └── images/             # Ảnh chụp màn hình Math Studio dành cho giáo viên
 ├── .agent/                 # Cấu hình Autonomous Agent của Google Antigravity
 │   ├── rules/              # Quy chuẩn toán học & sư phạm nghiêm ngặt
 │   ├── skills/             # Kỹ năng tự động tạo & thẩm định đề (/tao-de)

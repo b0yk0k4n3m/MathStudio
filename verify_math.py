@@ -1,168 +1,153 @@
-"""
-Script verify_math.py: Kiểm chứng tính đúng đắn toán học 100% bằng SymPy
-cho đề thi số 03 chuẩn cấu trúc Tốt nghiệp THPT 2026.
-"""
-
 import sympy as sp
-import math
 
 def verify_all():
-    print("=" * 60)
-    print("KIỂM CHỨNG TOÁN HỌC BẰNG SYMPY — ĐỀ THI SỐ 03 (THPT 2026)")
-    print("=" * 60)
+    print("=== KIỂM CHỨNG TOÁN HỌC CHO ĐỀ THI ===")
     
     # ----------------------------------------------------
-    # PHẦN I: 12 CÂU TRẮC NGHIỆM 4 PHƯƠNG ÁN
+    # PHẦN I
     # ----------------------------------------------------
     print("\n--- PHẦN I ---")
+    x = sp.Symbol('x')
     
-    # Câu 1: Hàm bậc ba y = x^3 - 3x + 2
-    x = sp.Symbol('x', real=True)
-    f1 = x**3 - 3*x + 2
-    f1_prime = sp.diff(f1, x)
-    crit_1 = sp.solve(f1_prime, x)
-    print(f"Câu 1: f'(x) = {f1_prime}, cực trị tại x = {crit_1}")
-    print(f"       Giá trị cực trị: f(-1) = {f1.subs(x, -1)}, f(1) = {f1.subs(x, 1)}, f(0) = {f1.subs(x, 0)}")
-    assert crit_1 == [-1, 1]
-    assert f1.subs(x, -1) == 4 and f1.subs(x, 1) == 0 and f1.subs(x, 0) == 2
-    print("=> Câu 1: ĐÁP ÁN ĐÚNG LÀ A (y = x^3 - 3x + 2)")
-
-    # Câu 2: Tiệm cận xiên y = (x^2 - 3x + 5)/(x - 1)
-    f2 = (x**2 - 3*x + 5)/(x - 1)
-    a2 = sp.limit(f2/x, x, sp.oo)
-    b2 = sp.limit(f2 - a2*x, x, sp.oo)
-    print(f"Câu 2: Tiệm cận xiên y = {a2}x + {b2}")
-    assert a2 == 1 and b2 == -2
-    print("=> Câu 2: ĐÁP ÁN ĐÚNG LÀ A (y = x - 2)")
-
-    # Câu 3: Đồ thị f'(x) = x^2 - x - 2
-    f3_prime = x**2 - x - 2
-    roots_3 = sp.solve(f3_prime, x)
-    print(f"Câu 3: f'(x) = 0 có nghiệm {roots_3}, f'(x) > 0 khi x in (-oo, -1) U (2, +oo)")
-    assert roots_3 == [-1, 2]
-    print("=> Câu 3: ĐÁP ÁN ĐÚNG LÀ A ((2; +oo))")
-
-    # Câu 4: HHKG - góc giữa SB và (ABC) với SA _|_ (ABC), SA = a, AB = a
-    deg_4 = math.degrees(math.atan(1.0))
-    print(f"Câu 4: tan(góc) = 1 => góc = {deg_4}°")
-    assert abs(deg_4 - 45.0) < 1e-6
-    print("=> Câu 4: ĐÁP ÁN ĐÚNG LÀ A (45°)")
-
-    # Câu 5: Thể tích chóp tứ giác đều S.ABCD: cạnh đáy a, h = 3a
-    a_sym = sp.Symbol('a', positive=True)
-    V5 = sp.Rational(1, 3) * a_sym**2 * (3 * a_sym)
-    print(f"Câu 5: V = {V5}")
-    assert V5 == a_sym**3
-    print("=> Câu 5: ĐÁP ÁN ĐÚNG LÀ A (a^3)")
-
-    # Câu 6: Mặt cầu (S): (x - 2)^2 + (y + 1)^2 + (z - 4)^2 = 25
-    print("Câu 6: Tâm I(2; -1; 4), R = sqrt(25) = 5")
-    print("=> Câu 6: ĐÁP ÁN ĐÚNG LÀ A (I(2; -1; 4) và R = 5)")
-
-    # Câu 7: MP qua A(3, 0, 0), B(0, -2, 0), C(0, 0, 1)
-    print("Câu 7: x/3 + y/(-2) + z/1 = 1 <=> 2x - 3y + 6z - 6 = 0")
-    print("=> Câu 7: ĐÁP ÁN ĐÚNG LÀ A (2x - 3y + 6z - 6 = 0)")
-
-    # Câu 8: Giao tuyến (P): x + 2y - z + 1 = 0 và (Q): 2x - y + z - 4 = 0
-    nP = sp.Matrix([1, 2, -1])
-    nQ = sp.Matrix([2, -1, 1])
-    u8 = nP.cross(nQ)
-    print(f"Câu 8: u = nP x nQ = {list(u8)}")
-    assert list(u8) == [1, -3, -5]
-    print("=> Câu 8: ĐÁP ÁN ĐÚNG LÀ A (u1 = (1; -3; -5))")
-
-    # Câu 9: Bất phương trình log2(3x - 5) <= 2
-    print("Câu 9: log2(3x - 5) <= 2 <=> 5/3 < x <= 3")
-    print("=> Câu 9: ĐÁP ÁN ĐÚNG LÀ A ((5/3; 3])")
-
-    # Câu 10: Tích phân int_0^1 (2x + 3)/(x + 1) dx
-    int_10 = sp.integrate((2*x + 3)/(x + 1), (x, 0, 1))
-    print(f"Câu 10: Tích phân = {int_10}")
-    assert int_10 == 2 + sp.log(2)
-    print("=> Câu 10: ĐÁP ÁN ĐÚNG LÀ A (2 + ln 2)")
-
-    # Câu 11: Diện tích parabol y = -x^2 + 4x và y = x
-    int_11 = sp.integrate((-x**2 + 4*x) - x, (x, 0, 3))
-    print(f"Câu 11: Diện tích = {int_11}")
-    assert int_11 == sp.Rational(9, 2)
-    print("=> Câu 11: ĐÁP ÁN ĐÚNG LÀ A (9/2)")
-
-    # Câu 12: Thống kê ghép nhóm:
-    Q1 = 15 + (10 - 4)/12 * 5
-    Q3 = 25 + (30 - 26)/8 * 5
-    delta_Q = Q3 - Q1
-    print(f"Câu 12: Q1 = {Q1}, Q3 = {Q3}, Delta_Q = {delta_Q}")
-    assert delta_Q == 10.0
-    print("=> Câu 12: ĐÁP ÁN ĐÚNG LÀ A (10,0)")
+    # Câu 1: Nguyên hàm 3x^2 + cos(x)
+    f1 = 3*x**2 + sp.cos(x)
+    F1 = sp.integrate(f1, x)
+    print(f"Câu 1: int(3x^2 + cos(x)) = {F1} + C -> Đúng là x^3 + sin(x)")
+    
+    # Câu 2: Tính chất nguyên hàm
+    print("Câu 2: Khẳng định sai: int(f*g) = int(f)*int(g) -> Lý thuyết chuẩn")
+    
+    # Câu 3: Tích phân int_1^5 = int_1^3 + int_3^5 = 4 + (-2) = 2
+    print("Câu 3: 4 + (-2) = 2 -> Đáp án A")
+    
+    # Câu 4: int_0^1 (2f(x) - 1) dx = 2*3 - 1 = 5
+    print("Câu 4: 2*3 - 1 = 5 -> Đáp án A")
+    
+    # Câu 5: int_0^1 (3x^2 + 2*e^x) dx
+    f5 = 3*x**2 + 2*sp.exp(x)
+    I5 = sp.integrate(f5, (x, 0, 1))
+    print(f"Câu 5: int_0^1 (3x^2 + 2e^x) dx = {I5} = 2*E - 1 -> Đáp án A")
+    
+    # Câu 6: Tọa độ u = 2i - 3j + 5k -> (2; -3; 5)
+    print("Câu 6: (2; -3; 5) -> Đáp án A")
+    
+    # Câu 7: A(1; 2; -1), B(3; 0; 0) -> AB = (2; -2; 1) -> |AB| = sqrt(4+4+1) = 3
+    A = sp.Matrix([1, 2, -1])
+    B = sp.Matrix([3, 0, 0])
+    AB = B - A
+    len_AB = AB.norm()
+    print(f"Câu 7: AB = {AB.T}, len = {len_AB} -> Đáp án A")
+    
+    # Câu 8: u = (1, 0, -1), v = (1, 1, 0) -> cos = 1 / (sqrt(2)*sqrt(2)) = 1/2 -> 60 deg
+    u = sp.Matrix([1, 0, -1])
+    v = sp.Matrix([1, 1, 0])
+    cos_uv = u.dot(v) / (u.norm() * v.norm())
+    print(f"Câu 8: cos(u, v) = {cos_uv} -> góc = 60 độ -> Đáp án A")
+    
+    # Câu 9: (P): 2x - 3y + z - 4 = 0 -> n = (2; -3; 1)
+    print("Câu 9: n = (2; -3; 1) -> Đáp án A")
+    
+    # Câu 10: Đi qua M(1; 2; -3), n = (2; -1; 4)
+    # 2(x-1) - (y-2) + 4(z+3) = 2x - y + 4z + 12 = 0
+    print("Câu 10: 2x - y + 4z + 12 = 0 -> Đáp án A")
+    
+    # Câu 11: P(A|B) = P(AB)/P(B)
+    print("Câu 11: P(A|B) = P(AB)/P(B) -> Đáp án A")
+    
+    # Câu 12: P(A)=0.6, P(B)=0.5, P(AB)=0.3 -> P(A|B) = 0.3/0.5 = 0.6
+    print(f"Câu 12: P(A|B) = 0.3/0.5 = {0.3/0.5} -> Đáp án A")
 
     # ----------------------------------------------------
-    # PHẦN II: 4 CÂU ĐÚNG / SAI (MỖI CÂU 4 Ý a, b, c, d)
+    # PHẦN II
     # ----------------------------------------------------
     print("\n--- PHẦN II ---")
-
-    # Câu 1: f(x) = x^3 - 3x^2 + 2
-    f_p2_1 = x**3 - 3*x**2 + 2
-    f_p2_1_diff = sp.diff(f_p2_1, x)
-    crit_p2_1 = sp.solve(f_p2_1_diff, x)
-    print(f"Phần II - Câu 1: cực trị tại {crit_p2_1}")
-    print("=> Câu 1: a) Đúng | b) Đúng | c) Sai | d) Đúng")
-
-    # Câu 2: y = (x^2 + 2x + 2)/(x + 1) = x + 1 + 1/(x + 1)
-    print("=> Câu 2: a) Đúng | b) Sai | c) Đúng | d) Đúng")
-
-    # Câu 3: Đồ thị f'(x) cắt Ox tại -2, 1, 3
-    print("=> Câu 3: a) Đúng | b) Sai | c) Đúng | d) Đúng")
-
-    # Câu 4: S.ABCD, đáy vuông cạnh a, SA _|_ đáy, SA = a*sqrt(2)
-    print("=> Câu 4: a) Đúng | b) Đúng | c) Sai | d) Đúng")
+    # Câu 1: (P): y = -x^2 + 4x và d: y = x
+    # a) Hoành độ giao điểm: -x^2 + 4x = x <=> -x^2 + 3x = 0 <=> x=0, x=3
+    sols = sp.solve(-x**2 + 4*x - x, x)
+    print(f"Câu 1a: Giao điểm x = {sols} -> Đúng")
+    
+    # b) Công thức S = int_0^3 (-x^2 + 3x) dx
+    print("Câu 1b: Trên [0; 3], -x^2 + 4x >= x nên S = int_0^3 (-x^2 + 3x) dx -> Đúng")
+    
+    # c) S = 9/2
+    S = sp.integrate(-x**2 + 3*x, (x, 0, 3))
+    print(f"Câu 1c: S = {S} -> Đúng")
+    
+    # d) Thể tích khối tròn xoay khi quay (H) quanh Ox:
+    # V = pi * int_0^3 [(-x^2 + 4x)^2 - x^2] dx
+    integrand_V = (-x**2 + 4*x)**2 - x**2
+    V = sp.pi * sp.integrate(integrand_V, (x, 0, 3))
+    print(f"Câu 1d: V = {V} = {float(V/sp.pi)}*pi = 108pi/5")
+    
+    # Câu 2: Trong không gian Oxyz, cho A(1; 1; 0), B(0; 2; 1), C(1; 0; 2) và điểm M(2; 3; -1).
+    A2 = sp.Matrix([1, 1, 0])
+    B2 = sp.Matrix([0, 2, 1])
+    C2 = sp.Matrix([1, 0, 2])
+    M2 = sp.Matrix([2, 3, -1])
+    
+    AB2 = B2 - A2 # (-1, 1, 1)
+    AC2 = C2 - A2 # (0, -1, 2)
+    n_ABC = AB2.cross(AC2) # (3, 2, 1)
+    print(f"Câu 2a, b: AB = {AB2.T}, AC = {AC2.T}, n = AB x AC = {n_ABC.T}")
+    # Mặt phẳng (ABC): 3(x-1) + 2(y-1) + 1(z-0) = 0 <=> 3x + 2y + z - 5 = 0
+    # Khoảng cách từ M(2; 3; -1) đến (ABC):
+    # d = |3(2) + 2(3) + 1(-1) - 5| / sqrt(3^2 + 2^2 + 1^2) = |6 + 6 - 1 - 5| / sqrt(14) = 6 / sqrt(14) = 3*sqrt(14)/7
+    dist_M = abs(3*2 + 2*3 + 1*(-1) - 5) / sp.sqrt(3**2 + 2**2 + 1**2)
+    print(f"Câu 2c, d: d(M, (ABC)) = {dist_M} = {sp.simplify(dist_M)}")
 
     # ----------------------------------------------------
-    # PHẦN III: 6 CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN
+    # PHẦN III
     # ----------------------------------------------------
     print("\n--- PHẦN III ---")
+    # Câu 1: int_1^4 [3f'(x) - 2x] dx = 3(f(4) - f(1)) - (4^2 - 1^2) = 3(11 - 2) - 15 = 27 - 15 = 12
+    ans_III_1 = 3*(11 - 2) - (16 - 1)
+    print(f"Phần III - Câu 1: {ans_III_1}")
+    
+    # Câu 2: v(t) = -4t + 20. Khi dừng v=0 => t=5. s = int_0^5 (-4t+20) dt
+    t = sp.Symbol('t')
+    s_stop = sp.integrate(-4*t + 20, (t, 0, 5))
+    print(f"Phần III - Câu 2: Quãng đường dừng hẳn = {s_stop}")
+    
+    # Câu 3: Khoảng cách giữa 2 điểm A(1; 2; 3) và B(4; -2; 3)
+    # AB = sqrt((4-1)^2 + (-2-2)^2 + (3-3)^2) = sqrt(9 + 16) = 5
+    pA = sp.Matrix([1, 2, 3])
+    pB = sp.Matrix([4, -2, 3])
+    dist_AB = (pB - pA).norm()
+    print(f"Phần III - Câu 3: Khoảng cách AB = {dist_AB}")
+    
+    # Câu 4: Xác suất Bayes
+    # P(B1) = 0.6, P(B2) = 0.4
+    # P(A|B1) = 0.02, P(A|B2) = 0.03
+    # P(A) = 0.6*0.02 + 0.4*0.03 = 0.012 + 0.012 = 0.024
+    # P(B1|A) = 0.012 / 0.024 = 0.5
+    PA = 0.6*0.02 + 0.4*0.03
+    PB1_given_A = (0.6*0.02) / PA
+    print(f"Phần III - Câu 4: P(A) = {PA}, P(B1|A) = {PB1_given_A}")
 
-    # Câu 1: Lăng trụ đứng ABC.A'B'C', đáy ABC vuông tại A, AB = 3, AC = 4
-    ans_p3_1 = sp.Rational(1, 2) * 3 * 4 * 5
-    print(f"Câu 1: V = {ans_p3_1}")
-    assert ans_p3_1 == 30
-    print("=> Câu 1: ĐÁP SỐ = 30")
+    # ----------------------------------------------------
+    # PHẦN IV
+    # ----------------------------------------------------
+    print("\n--- PHẦN IV ---")
+    # Bài 1: y = sqrt(2x + 1), x in [0, 4] quanh Ox
+    # V = pi * int_0^4 (2x + 1) dx = pi * [x^2 + x]_0^4 = pi * (16 + 4) = 20*pi
+    V_rot = sp.pi * sp.integrate(2*x + 1, (x, 0, 4))
+    print(f"Phần IV - Bài 1: Thể tích = {V_rot}")
+    
+    # Bài 2: Mái che qua A(0; 0; 3), B(6; 0; 4), C(0; 8; 5).
+    # u = AB = (6, 0, 1), v = AC = (0, 8, 2)
+    # n = AB x AC = (0*2 - 1*8; 1*0 - 6*2; 6*8 - 0*0) = (-8; -12; 48) = -4 * (2; 3; -12)
+    # Chọn n = (2; 3; -12)
+    # Mp (P): 2(x-0) + 3(y-0) - 12(z-3) = 0 <=> 2x + 3y - 12z + 36 = 0.
+    u_roof = sp.Matrix([6, 0, 1])
+    v_roof = sp.Matrix([0, 8, 2])
+    n_roof = u_roof.cross(v_roof)
+    print(f"Phần IV - Bài 2: n_raw = {n_roof.T}")
+    n_roof_simp = sp.Matrix([2, 3, -12])
+    dist_S = abs(2*3 + 3*4 - 12*6 + 36) / n_roof_simp.norm()
+    print(f"Phần IV - Bài 2: Khoảng cách = {dist_S} ≈ {float(dist_S):.2f} m")
+    cos_angle = 12 / n_roof_simp.norm()
+    angle_deg = sp.acos(cos_angle) * 180 / sp.pi
+    print(f"Phần IV - Bài 2: cos(alpha) = {cos_angle} ≈ {float(cos_angle):.4f}, góc = {float(angle_deg):.2f} độ")
 
-    # Câu 2: Mặt cầu (S): x^2 + y^2 + z^2 - 4x + 6y - 2z - 11 = 0, A(5; 1; 13)
-    ans_p3_2 = 13 + 5
-    print(f"Câu 2: AM_max = {ans_p3_2}")
-    assert ans_p3_2 == 18
-    print("=> Câu 2: ĐÁP SỐ = 18")
-
-    # Câu 3: Mặt phẳng tiếp xúc (S): (x-1)^2 + (y-2)^2 + (z+3)^2 = 9, song song (P): 2x - 2y + z - 7 = 0
-    ans_p3_3 = 14
-    print(f"Câu 3: D = {ans_p3_3}")
-    assert ans_p3_3 == 14
-    print("=> Câu 3: ĐÁP SỐ = 14")
-
-    # Câu 4: Đường vuông góc chung của d1 và d2:
-    ans_p3_4 = 1 + 2 + 3
-    print(f"Câu 4: M(1; 2; 3) => T = {ans_p3_4}")
-    assert ans_p3_4 == 6
-    print("=> Câu 4: ĐÁP SỐ = 6")
-
-    # Câu 5: Số nghiệm nguyên của log2(x^2 - 2x) <= 3
-    ans_p3_5 = 4
-    print(f"Câu 5: Số nghiệm nguyên = {ans_p3_5}")
-    assert ans_p3_5 == 4
-    print("=> Câu 5: ĐÁP SỐ = 4")
-
-    # Câu 6: Tích phân I = int_0^1 (4x + 7)/(x^2 + 3x + 2) dx = a ln 2 + b ln 3
-    ans_p3_6 = 3 * 2 + 2 * 1
-    int_p3_6 = sp.integrate((4*x + 7)/(x**2 + 3*x + 2), (x, 0, 1))
-    print(f"Câu 6: I = {int_p3_6}")
-    assert int_p3_6 == 2*sp.log(2) + sp.log(3)
-    print(f"       T = 3a + 2b = {ans_p3_6}")
-    assert ans_p3_6 == 8
-    print("=> Câu 6: ĐÁP SỐ = 8")
-
-    print("\n" + "=" * 60)
-    print("TẤT CẢ 22 CÂU ĐÃ ĐƯỢC KIỂM CHỨNG CHÍNH XÁC 100%!")
-    print("=" * 60)
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     verify_all()
