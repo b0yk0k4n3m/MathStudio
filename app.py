@@ -33,6 +33,7 @@ if sys.platform == "win32":
 import markdown2
 from nicegui import app, ui
 from export_docx import export_exam_word
+from exam_shuffler import generate_shuffled_package
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -3298,13 +3299,18 @@ def main_page():
             except Exception as e:
                 ui.notify(f"Lỗi khi xuất Word: {e}", type="negative")
 
-        with ui.row().classes("w-full items-center justify-end gap-2 pt-2 border-t border-slate-100"):
-            ui.button("Hủy", on_click=export_word_dialog.close).props("flat no-caps")
+        with ui.row().classes("w-full items-center justify-between gap-2 pt-2 border-t border-slate-100 flex-wrap"):
             ui.button(
-                "🚀 Tải file Word về máy (.docx)",
-                on_click=perform_word_export,
-                color="blue-700",
-            ).props("unelevated no-caps").classes("font-semibold px-4 rounded-xl")
+                "🔀 Đảo nhiều mã đề (101, 102...)",
+                on_click=lambda: (export_word_dialog.close(), open_shuffle_modal()),
+            ).props("flat no-caps color=indigo-700 text-xs").tooltip("Chuyển sang công cụ trộn và đảo nhiều mã đề kèm Bảng ma trận đáp án")
+            with ui.row().classes("items-center gap-2"):
+                ui.button("Hủy", on_click=export_word_dialog.close).props("flat no-caps")
+                ui.button(
+                    "🚀 Tải file Word về máy (.docx)",
+                    on_click=perform_word_export,
+                    color="blue-700",
+                ).props("unelevated no-caps").classes("font-semibold px-4 rounded-xl")
 
     def open_word_export_modal(target_file: str = None):
         if target_file:
@@ -3316,6 +3322,163 @@ def main_page():
             t = meta.get("title") or active_p.stem
             export_word_state["title"] = t
         export_word_dialog.open()
+
+    # -----------------------------------------------------------------
+    # HỘP THOẠI CẤU HÌNH TRỘN & ĐẢO NHIỀU MÃ ĐỀ (KÈM BẢNG MA TRẬN ĐÁP ÁN)
+    # -----------------------------------------------------------------
+    shuffle_dialog = ui.dialog()
+    shuffle_state = {
+        "preset": "4",
+        "custom_codes": "101, 102, 103, 104",
+        "shuffle_questions": True,
+        "shuffle_mcq_options": True,
+        "shuffle_tf_items": False,
+        "mode": "exam_only",
+        "school": "SỞ GIÁO DỤC VÀ ĐÀO TẠO",
+        "title": "ĐỀ KIỂM TRA ĐỊNH KỲ NĂM HỌC 2025 - 2026",
+    }
+
+    with shuffle_dialog, ui.card().classes("w-[680px] max-w-[95vw] max-h-[90vh] overflow-y-auto p-6 rounded-3xl gap-4 bg-white shadow-2xl"):
+        with ui.row().classes("w-full items-center justify-between"):
+            with ui.row().classes("items-center gap-2"):
+                ui.icon("shuffle", size="26px").classes("text-indigo-600")
+                ui.label("Cấu hình Trộn & Đảo Đề Thi").classes("text-lg font-black text-slate-800")
+            ui.button(icon="close", on_click=shuffle_dialog.close).props("flat round dense size=sm").classes("text-slate-400 hover:text-slate-600")
+
+        ui.label(
+            "Tự động tạo nhiều mã đề khác nhau, hoán vị câu hỏi theo từng Phần, đảo phương án A-B-C-D (tự cập nhật đáp án đúng), "
+            "xuất từng mã đề ra file Word (.docx) và kèm 1 file Word Bảng ma trận soi đáp án tổng hợp các mã đề, đóng gói thành file ZIP."
+        ).classes("text-xs text-slate-500 -mt-1 leading-relaxed")
+
+        ui.separator()
+
+        # 1. Chọn số lượng / danh sách mã đề
+        ui.label("🎯 1. Danh sách Mã đề cần tạo:").classes("text-xs font-bold text-slate-700 uppercase tracking-wider")
+
+        def update_shuffle_preset(e):
+            val = e.value
+            presets = {
+                "2": "101, 102",
+                "4": "101, 102, 103, 104",
+                "6": "101, 102, 103, 104, 105, 106",
+                "8": "101, 102, 103, 104, 105, 106, 107, 108",
+            }
+            if val in presets:
+                shuffle_state["custom_codes"] = presets[val]
+                shuffle_codes_input.value = presets[val]
+
+        ui.radio(
+            {
+                "2": "2 mã (101, 102)",
+                "4": "4 mã (101 - 104)",
+                "6": "6 mã (101 - 106)",
+                "8": "8 mã (101 - 108)",
+                "custom": "Tùy chỉnh...",
+            },
+            value="4",
+            on_change=update_shuffle_preset,
+        ).props("dense inline").classes("text-xs text-slate-800 gap-3")
+
+        shuffle_codes_input = ui.input(
+            "Danh sách mã đề (ngăn cách bằng dấu phẩy)",
+            value=shuffle_state["custom_codes"],
+        ).bind_value(shuffle_state, "custom_codes").props("outlined dense").classes("w-full text-xs font-mono")
+
+        # 2. Quy tắc đảo
+        ui.label("⚙️ 2. Quy tắc hoán vị & xáo trộn:").classes("text-xs font-bold text-slate-700 uppercase tracking-wider mt-1")
+        with ui.column().classes("w-full bg-slate-50 p-3 rounded-xl border border-slate-200 gap-2 text-xs"):
+            ui.checkbox(
+                "Hoán vị thứ tự câu hỏi trong từng Phần (giữ đúng cấu trúc ma trận Phần I, II, III, đánh số lại từ 1)",
+                value=True,
+            ).bind_value(shuffle_state, "shuffle_questions").props("dense")
+            ui.checkbox(
+                "Đảo ngẫu nhiên các phương án A, B, C, D (Phần I - tự động cập nhật đáp án đúng trong lời giải)",
+                value=True,
+            ).bind_value(shuffle_state, "shuffle_mcq_options").props("dense")
+            ui.checkbox(
+                "Đảo thứ tự các ý a), b), c), d) trong câu hỏi Đúng/Sai (Phần II - mặc định tắt để giữ thứ tự sư phạm)",
+                value=False,
+            ).bind_value(shuffle_state, "shuffle_tf_items").props("dense")
+
+        # 3. Hình thức xuất Word
+        ui.label("📑 3. Hình thức xuất Word từng mã đề:").classes("text-xs font-bold text-slate-700 uppercase tracking-wider mt-1")
+        ui.radio(
+            {
+                "exam_only": "📄 Chỉ Đề thi từng mã đề (Dành cho học sinh làm bài, có khung Họ tên/SBD)",
+                "exam_and_solution": "📑 Đề thi kèm Đáp án & Lời giải chi tiết theo từng mã đề",
+            },
+            value="exam_only",
+        ).bind_value(shuffle_state, "mode").props("dense").classes("gap-2 text-xs text-slate-800")
+
+        # 4. Tiêu đề trường / kỳ thi
+        with ui.expansion("🏫 Tùy chỉnh thông tin tiêu đề đề thi", icon="tune").classes("w-full text-xs bg-slate-50 rounded-xl border border-slate-200"):
+            with ui.column().classes("w-full gap-2 p-2"):
+                ui.input("Đơn vị / Sở / Trường").bind_value(shuffle_state, "school").props("outlined dense").classes("w-full")
+                ui.input("Tiêu đề kỳ thi").bind_value(shuffle_state, "title").props("outlined dense").classes("w-full")
+
+        def perform_shuffle_export():
+            active_p = Path(state["active_file"])
+            if not active_p.exists():
+                ui.notify("Không tìm thấy file đề hiện tại!", type="warning")
+                return
+
+            raw = active_p.read_text(encoding="utf-8")
+            h_md, q_list = parse_exam_markdown(raw)
+            if not q_list:
+                ui.notify("Đề thi chưa có câu hỏi nào để đảo!", type="warning")
+                return
+
+            raw_codes = shuffle_state["custom_codes"]
+            codes = [c.strip() for c in raw_codes.replace(";", ",").split(",") if c.strip()]
+            if not codes:
+                ui.notify("Vui lòng nhập ít nhất 1 mã đề!", type="warning")
+                return
+
+            ui.notify(f"⏳ Đang tiến hành tạo {len(codes)} mã đề và bảng ma trận đáp án...", type="info")
+
+            try:
+                res = generate_shuffled_package(
+                    header_md=h_md,
+                    questions=q_list,
+                    exam_codes=codes,
+                    school_name=shuffle_state["school"],
+                    exam_title=shuffle_state["title"],
+                    mode=shuffle_state["mode"],
+                    shuffle_questions=shuffle_state["shuffle_questions"],
+                    shuffle_mcq_options=shuffle_state["shuffle_mcq_options"],
+                    shuffle_tf_items=shuffle_state["shuffle_tf_items"],
+                    output_dir=OUTPUT_DIR,
+                )
+
+                zip_p = res["zip_path"]
+                ui.download(zip_p.read_bytes(), filename=res["zip_filename"])
+                ui.notify(
+                    f"✓ Đã tạo thành công {len(codes)} mã đề ({', '.join(codes)}) và Bảng ma trận đáp án! Đang tải file ZIP...",
+                    type="positive",
+                    duration=6,
+                )
+                shuffle_dialog.close()
+            except Exception as e:
+                ui.notify(f"Lỗi khi đảo đề: {e}", type="negative")
+
+        with ui.row().classes("w-full items-center justify-end gap-2 pt-2 border-t border-slate-100"):
+            ui.button("Hủy", on_click=shuffle_dialog.close).props("flat no-caps")
+            ui.button(
+                "🚀 Bắt đầu Đảo đề & Tải trọn bộ ZIP (.zip)",
+                on_click=perform_shuffle_export,
+                color="indigo-700",
+            ).props("unelevated no-caps").classes("font-semibold px-5 py-2 rounded-xl text-white shadow-md hover:bg-indigo-800")
+
+    def open_shuffle_modal(target_file: str = None):
+        if target_file:
+            state["active_file"] = target_file
+        active_p = Path(state["active_file"])
+        if active_p.exists():
+            idx_d = _read_index_json()
+            meta = idx_d.get(active_p.name, {})
+            t = meta.get("title") or active_p.stem
+            shuffle_state["title"] = t
+        shuffle_dialog.open()
 
     # -----------------------------------------------------------------
     # HỘP THOẠI ĐỔI TÊN & XÓA BỘ ĐỀ TRONG OUTPUT/
@@ -3493,6 +3656,10 @@ def main_page():
                                 icon="article",
                                 on_click=lambda item=ex: open_word_export_modal(item["path"]),
                             ).props("flat round dense size=xs color=blue-700").tooltip("Xuất ra file Word (.docx)")
+                            ui.button(
+                                icon="shuffle",
+                                on_click=lambda item=ex: open_shuffle_modal(item["path"]),
+                            ).props("flat round dense size=xs color=indigo-700").tooltip("Trộn & Đảo nhiều mã đề (.zip)")
                             ui.button(icon="delete", on_click=open_delete).props(
                                 "flat round dense size=xs color=red-500"
                             ).tooltip("Xóa bộ đề")
@@ -3596,6 +3763,14 @@ def main_page():
                         ).props("unelevated no-caps size=sm").classes(
                             "text-white px-3.5 rounded-lg font-semibold shadow-xs hover:bg-blue-800"
                         ).tooltip("Xuất đề thi ra Word: Chỉ đề thi, Đề kèm đáp án, hoặc Riêng đáp án")
+
+                        ui.button(
+                            "🔀 Cấu hình Đảo đề",
+                            on_click=lambda: open_shuffle_modal(),
+                            color="indigo-700",
+                        ).props("unelevated no-caps size=sm").classes(
+                            "text-white px-3.5 rounded-lg font-semibold shadow-xs hover:bg-indigo-800"
+                        ).tooltip("Trộn và đảo nhiều mã đề (101, 102...) kèm Bảng ma trận soi đáp án & nén ZIP")
 
             # Thanh Lọc câu hỏi nhanh (Filter Bar 1-Click)
             with ui.row().classes("w-full items-center justify-between bg-white px-4 py-2 rounded-xl border border-slate-200 mt-2 flex-wrap gap-2"):
